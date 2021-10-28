@@ -28,28 +28,31 @@
             <label for="txt_last_name">Last name:</label>
             <input type="text" id="txt_last_name" name="lastname"
             autocomplete="name"
-            placeholder="Your name">
+            placeholder="Your last name">
 
             <label for="txt_name">Name:</label>
             <input type="text" id="txt_name" name="name"
             autocomplete="name"
-            placeholder="Your last name">
+            placeholder="Your name">
             <br>
             <br>
             <label for="txt_telephone">Telephone:</label>
             <input type="text" id="txt_telephone" name="telephone"
             placeholder="e.g. 69xxxxxxxx"
             pattern="[0-9]{10}"
-            autocomplete="tel">
+            autocomplete="tel" 
+            required>
 
             <label for="txt_email">Email:</label>
             <input type="text" id="txt_email" name="email"
             autocomplete="email"
-            placeholder="e.g. example@mail.com">
+            placeholder="e.g. example@mail.com" 
+            required>
             <br>
             <br>
             <textarea rows="4" cols="50" name="message" form="usrform"
-            placeholder="Enter your message here..."></textarea> <br>
+            placeholder="Enter your message here..." 
+            required></textarea> <br>
 
             <input type="submit" value="Submit">
         </fieldset>

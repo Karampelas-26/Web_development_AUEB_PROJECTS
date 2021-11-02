@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Next Graduate</title>
+    <!--meta gia na emfanizetai swsta se diaforetikes othones syskeywn-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+
+    <style>
+
+        textarea{
+            resize: none; /*gia na mi mporei na allaksei to megethos tou textareia*/
+            /* padding: 30px;
+            border: 0;
+            width: 100%;
+            font-size: 1rem;
+            background-color: #2d2d2d;
+            color: white;
+            border-radius: 4px; */
+        }
+
+        h1{
+            text-align: center; /*stoixisi keimenou*/
+            font-size: 40px;
+        }
+
+        .input {
+            float: left;
+            width: 293px;
+            margin: 1rem 0;
+            position: relative; /*wste na min apoklinei polu apo ti thesi pou tha itan kanonika*/
+            border-radius: 4px;
+        }
+
+        .input-container {
+            width: 650px; /* to platos olou tou input container.*/ 
+            max-width: 100%;
+            margin: 20px auto 25px auto; /*keno metaksi twn keliwn*/
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <!--homepage-->
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+        <!--menu-->
+        <nav>
+            <ul>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="about_us.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- stoixeia autou pou thelei na epikoinwnisei-->
+        <div class="container">
+            <div class="row">
+                <h1>Contact</h1>
+            </div>
+            <div class="row input-container">
+                <div class="input">
+                    <label for="txt_last_name">Last name:</label>
+                    <input type="text" id="txt_last_name" name="lastname"
+                    autocomplete="name"
+                    placeholder="Your last name">
+                </div>
+                <div class="input">
+                    <label for="txt_name">Name:</label>
+                    <input type="text" id="txt_name" name="name"
+                    autocomplete="name"
+                    placeholder="Your name">
+                </div>
+                <div class="input">
+                    <label for="txt_telephone">Telephone:</label>
+                    <input type="text" id="txt_telephone" name="telephone"
+                    placeholder="e.g. 69xxxxxxxx"
+                    pattern="[0-9]{10}"
+                    autocomplete="tel" 
+                    required>
+                </div>
+                <div class="input">
+                    <label for="txt_email">Email:</label>
+                    <input type="text" id="txt_email" name="email"
+                    autocomplete="email"
+                    placeholder="e.g. example@mail.com" 
+                    required>
+                </div>
+                <div class="input">
+                    <textarea rows="4" cols="50" name="message" form="usrform"
+                    placeholder="Enter your message here..." 
+                    required></textarea>
+                </div>
+            </div> 
+            <div class="buttons">
+                <div class="submit_btn">
+                    submit
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--to footer tis istoselidas mas-->
+    <footer>
+        <!--stoixeia epikoinwnias-antonis-->
+        <h2>Contact</h2>
+        <h3>Antonios Christoulakis</h3>
+        <a href="mailto:p3180207@aueb.gr">Email: p3180207@aueb.gr</a>
+        <p>Telephone: 698723987</p>
+
+        <!--stoixeia epikoinwnias-giorgos-->
+        <h3>Georgios Karampelas</h3>
+        <a href="mailto:p3180072@aueb.gr">Email: p3180072@aueb.gr</a>
+        <p>Telephone: 6945227237</p>
+    </footer>
+</body>
+
+</html>

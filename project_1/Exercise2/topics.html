@@ -24,21 +24,29 @@
     </header>
 
     <main>
-        <article>
-            <h2>Topics</h2>
-            <article>
-                <a href="cs_subject.html"><h3>Computer Science</h3></a>
-                <img src="img/computer_science.png" alt="computer_science">
-                <ul>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>HTML</li>
-                    <li>C Programming</li>
-                    <li>Javascript</li>
-                </ul>
+        <section class="all-topics">
+            <h1 id="topic-text">Topics</h2>
+            <article class="topic">
+                <a href="cs_subject.html" id='computer-science'>
+                    <!-- <h1 class = "title-subject">Computer Science</h1> -->
+                    Computer Science
+                </a>
+                <div class="photo-details">
+                    <img src="img/computer_science.png" alt="computer_science">
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>HTML</li>
+                        <li>C Programming</li>
+                        <li>Javascript</li>
+                    </ul>
+                <div></div>
             </article>
-            <article>
-                <a href="data_science_subject.html"><h3>Data Science</h3></a>
+            <article class="topic">
+                <a href="data_science_subject.html" id='data-science'>
+                    <!-- <h1 class = "title-subject">Data Science</h1> -->
+                    Data Science
+                </a>
                 <img src="img/data_science.png" alt="data_science">
                 <ul>
                     <li>Artificial Intelligence</li>
@@ -48,8 +56,11 @@
                     <li>Data Analysis</li>
                 </ul>
             </article>
-            <article>
-                <a href="bm_subject.html"><h3>Business & Management</h3></a>
+            <article class="topic">
+                <a href="bm_subject.html" id='business-and-managment'>
+                    <!-- <h1 class = "title-subject">Business & Management</h1> -->
+                    Business & Management
+                </a>
                 <img src="img/business_and_managment.png" alt="business_and_managment">
                 <ul>
                     <li>Business Administration</li>
@@ -59,7 +70,8 @@
                     <li>Economics</li>
                 </ul>
             </article>
-        </article>
+
+        </section>
     </main>
 
     <!--to footer tis istoselidas mas-->

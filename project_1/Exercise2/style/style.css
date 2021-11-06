@@ -163,7 +163,7 @@ kai kala pws einai xeirografh */
 me allo font, megethos, paxos, kai bazoume
 border mono sto katw meros tou onomatos 
 kai oxi sto text kanontas mia grammi apo katw */
-article h1 {
+.black-text-bottom-border {
     font-family: 'Barlow', sans-serif;
     font-size: 4em;
     font-weight: 700;
@@ -186,11 +186,11 @@ onoma mas */
     width: 365px;
 }
 
-#black-text-box {
+#text-box-about-us {
     text-align: center;
     background-color: #34495e;
     color: #e4f1fe;
-    width: 460px;
+    width: 500px;
     display: block;
     margin: auto;
     font-size: 50px;
@@ -199,7 +199,7 @@ onoma mas */
 }
 /* bazoume section img wste na min epileksei 
 ti fwtografia apo header kai tin morfopoihsei */
-section img {
+.rounded-img {
     width: 350px;
     height: auto;
     border-radius: 350px;
@@ -281,6 +281,151 @@ section img {
 
 /*__TOPICS__*/
 
+#topic-text {
+    text-align: center;
+    background-color: #34495e;
+    color: #e4f1fe;
+    width: 200px;
+    display: block;
+    margin: 40px auto;
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+
+.all-topics {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.topic {
+    border: 5px solid black;
+    border-radius: 150px;
+    background-color: #dadfe1;
+    padding: 20px;
+    margin: 40px 80px 90px; /*top|horizontal|bottom*/
+    display: block;
+}
+
+.photo-details img {
+    margin: 0px auto;
+    text-align: center;
+    display: block;
+}
+
+.title-subject {
+    font-family: 'Rubik', sans-serif;
+    font-size: 4em;
+    font-weight: 700;
+    padding-bottom: 15px;
+    text-align: center;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+.photo-details {
+    padding: 20px;
+    width: 60%;
+    margin: 40px auto;
+    border: 5px solid red;
+    /* display: inline-block; */
+    vertical-align: middle;
+}
+
+.photo-details img {
+    /* float: left; */
+}
+
+.photo-details ul {
+    /* float: right; */
+    /* list-style: none; */
+    font-size: 30px;
+    /* text-align: center; */
+    display: block;
+}
+
+.topic a {
+    font-family: 'Rubik', sans-serif;
+    font-size: 4em;
+    font-weight: 700;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    background-color: #34495e;
+    color: #e4f1fe; 
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+#computer-science {
+    width: 550px;
+}
+
+#data-science {
+    width: 400px;
+}
+
+#business-and-managment {
+    width: 750px;
+}
+
+.topic a:visited {
+    color: none;
+}
+
+.topic a:hover {
+    background-color: #abb7b7;
+}
+
+.topic a:active {
+    color:black;
+}
 
 
 /*__TOPICS__*/
+
+/* SUBJECTS */
+
+.subject {
+    /* border: 5px solid black; */
+    padding: 30px;
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    /* display: table; */
+    border-collapse: collapse;
+}
+
+.table {
+    display: table;
+    /* border: 5px solid black; */
+    /* border-spacing: 100px; */
+    
+}
+
+.lesson {
+    padding:50px;
+    background-color: #ccc;
+    border-radius: 100px;
+}
+
+.row {
+    display: table-row;
+    margin: 10px;
+}
+
+.cell {
+    display: table-cell;
+    border: 20px solid transparent;
+    background-clip: padding-box;
+}
+
+.subject a {
+    text-decoration: none;
+}
+
+.subject a:hover {
+    text-decoration: underline;
+}

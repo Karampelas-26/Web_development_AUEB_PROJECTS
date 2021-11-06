@@ -7,6 +7,59 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style/style.css" />
+
+        <style>
+
+            form{
+                background-color: #6c7a89;
+                width: 400px;
+                height: 750px;
+                margin: 40px auto;
+                border-radius: 50px;
+            }
+
+            .input{
+                background-color: #dfe1f1;
+                border-radius: 12px;
+                height: 50px;
+                width: 80%;
+                box-sizing: border-box;
+                padding: 10px;
+            }
+
+            .txt_input{
+                background-color: #dfe1f1;
+                width: 80%;
+                display: block;
+                margin: 0 auto;
+                height: 200px;
+                border-radius: 12px;
+            }
+
+            #contact_title{
+                text-align: center;
+                text-decoration: underline;
+            }
+
+            .label{
+                display: inline-block;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .input_row{
+                display: block;
+                margin: 0 auto;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .btn{
+                margin-top: 20px;
+            }
+
+        </style>
+
     </head>
 
 <body>
@@ -25,50 +78,59 @@
 
     <main>
         <!-- stoixeia autou pou thelei na epikoinwnisei-->
-        <div class="container">
-            <div class="row">
-                <h1>Contact</h1>
+        <!--den xrisimopoiithike fieldset opws tin askisi 1 gia na bgei pio wraio apotelesma-->
+            <h1 id="contact_title">Contact Us</h1>
+        <form>
+            
+            <div class="input_row">
+            <label for="txt_last_name" class="label">Last name:</label><br>
+            <input type="text" id="txt_last_name" name="lastname"
+            autocomplete="name"
+            placeholder="Your last name"
+            class="input" autofocus></div>
+        
+            <div class="input_row">
+            <label for="txt_name" class="label">Name:</label><br>
+            <input type="text" id="txt_name" name="name"
+            autocomplete="name"
+            placeholder="Your name"
+            class="input"></div>
+
+            <div class="input_row">
+            <label for="txt_telephone" class="label">Telephone:</label>
+            <input type="text" id="txt_telephone" name="telephone"
+            placeholder="e.g. 69xxxxxxxx"
+            pattern="[0-9]{10}"
+            autocomplete="tel" 
+            required 
+            class="input"></div>
+        
+            <div class="input_row">
+            <label for="txt_email" class="label">Email:</label><br>
+            <input type="text" id="txt_email" name="email"
+            autocomplete="email"
+            placeholder="e.g. example@mail.com" 
+            required 
+            class="input"></div>
+
+            <div class="input_row">
+                <h4>Gender:</h4>
+
+                <label for="male">Male</label>
+                <input type="radio" id="male" checked="checked" name="gender" value="Male">
+               
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                
             </div>
-            <div class="row input-container">
-                <div class="input">
-                    <label for="txt_last_name">Last name:</label>
-                    <input type="text" id="txt_last_name" name="lastname"
-                    autocomplete="name"
-                    placeholder="Your last name">
-                </div>
-                <div class="input">
-                    <label for="txt_name">Name:</label>
-                    <input type="text" id="txt_name" name="name"
-                    autocomplete="name"
-                    placeholder="Your name">
-                </div>
-                <div class="input">
-                    <label for="txt_telephone">Telephone:</label>
-                    <input type="text" id="txt_telephone" name="telephone"
-                    placeholder="e.g. 69xxxxxxxx"
-                    pattern="[0-9]{10}"
-                    autocomplete="tel" 
-                    required>
-                </div>
-                <div class="input">
-                    <label for="txt_email">Email:</label>
-                    <input type="text" id="txt_email" name="email"
-                    autocomplete="email"
-                    placeholder="e.g. example@mail.com" 
-                    required>
-                </div>
-                <div class="input">
-                    <textarea rows="4" cols="50" name="message" form="usrform"
-                    placeholder="Enter your message here..." 
-                    required></textarea>
-                </div>
-            </div> 
-            <div class="buttons">
-                <div class="submit_btn">
-                    submit
-                </div>
-            </div>
-        </div>
+        
+            <textarea rows="4" cols="50" name="message" form="usrform"
+            placeholder="Enter your message here..." 
+            required
+            class="txt_input"></textarea>
+            
+           <input type="submit" value="Submit" class="input_row btn">
+        </form>    
     </main>
 
     <!--to footer tis istoselidas mas-->

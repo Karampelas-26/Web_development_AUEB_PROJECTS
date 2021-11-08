@@ -7,59 +7,6 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style/style.css" />
-
-        <style>
-
-            form{
-                background-color: #6c7a89;
-                width: 400px;
-                height: 750px;
-                margin: 40px auto;
-                border-radius: 50px;
-            }
-
-            .input{
-                background-color: #dfe1f1;
-                border-radius: 12px;
-                height: 50px;
-                width: 80%;
-                box-sizing: border-box;
-                padding: 10px;
-            }
-
-            .txt_input{
-                background-color: #dfe1f1;
-                width: 80%;
-                display: block;
-                margin: 0 auto;
-                height: 200px;
-                border-radius: 12px;
-            }
-
-            #contact_title{
-                text-align: center;
-                text-decoration: underline;
-            }
-
-            .label{
-                display: inline-block;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .input_row{
-                display: block;
-                margin: 0 auto;
-                padding: 10px;
-                text-align: center;
-            }
-
-            .btn{
-                margin-top: 20px;
-            }
-
-        </style>
-
     </head>
 
 <body>
@@ -84,14 +31,14 @@
             
             <div class="input_row">
             <label for="txt_last_name" class="label">Last name:</label><br>
-            <input type="text" id="txt_last_name" name="lastname"
+            <input type="text" id="txt_last_name" name="lastname" minlength="3" maxlength="15"
             autocomplete="name"
             placeholder="Your last name"
             class="input" autofocus></div>
         
             <div class="input_row">
             <label for="txt_name" class="label">Name:</label><br>
-            <input type="text" id="txt_name" name="name"
+            <input type="text" id="txt_name" name="name" minlength="3" maxlength="15"
             autocomplete="name"
             placeholder="Your name"
             class="input"></div>
@@ -107,7 +54,7 @@
         
             <div class="input_row">
             <label for="txt_email" class="label">Email:</label><br>
-            <input type="text" id="txt_email" name="email"
+            <input type="email" id="txt_email" name="email"
             autocomplete="email"
             placeholder="e.g. example@mail.com" 
             required 

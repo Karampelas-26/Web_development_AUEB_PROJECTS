@@ -100,6 +100,7 @@ analoges morfopoihseis sta a kai h1*/
     left: 0;
     display: inline-block;
     width: 100%;
+    height: 300px;
 }
 
 #contact_footer {
@@ -156,7 +157,6 @@ analoges morfopoihseis sta a kai h1*/
     clear: both;
 }
 
-/* css rules for about us page */
 /*__ABOUT-US__*/
 
 /* allazoume to font wste na fainetai
@@ -216,9 +216,7 @@ ti fwtografia apo header kai tin morfopoihsei */
 .person-george {
     padding: 40px;
     margin: 40px;
-    /* border: 5px solid black; */
     background-color: #2574a9;
-    /* height: 560px; */
     width: 75%;
     float: left;
     clear: both;
@@ -229,15 +227,11 @@ ti fwtografia apo header kai tin morfopoihsei */
 .name-photo {
     padding: 10px;
     margin: 5px;
-    /* float: left; */
-    /* border: 4px solid red; */
     width: 35%;
 }
 
 .info {
     margin: 5px;
-    /* float: right; */
-    /* border: 4px solid green; */
     width: 50%;
     font-size: 25px;
 }
@@ -366,51 +360,83 @@ ti fwtografia apo header kai tin morfopoihsei */
 }
 /*__TOPICS__*/
 
-/*------------------SUBJECTS-----------------------------*/
 
-.subject {
-    border: 1px solid black;
-    padding: 30px;
+/* __SUBJECTS__ */
+
+/* san class container xrisimopoioume thn idia pou 
+ftiaksame gia ta topics*/
+
+.all-subject {
+    display: block;
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.courses {
+    display: inline-block;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 20px;
+    vertical-align: top;
+}
+
+.courses img {
+    width: 200px;
+}
+
+#browse-course {
+    text-align: center;
+    transition: .3s box-shadow;
+    box-shadow: 0 4px 16px rgba(75, 59, 59, 0.0);
+
+}
+
+.course {
+    border: 0x solid black;
+    border-radius: 35px;
+    background-color: #fff;
+    padding: 10px;
+    margin: 0px;
+    display: block;
+    transition: .3s box-shadow;
+    box-shadow: 0 4px 16px rgba(75, 59, 59, 0.0);
+}
+.course:hover {
+    box-shadow: 0 16px 30px rgba(0,0,0,.16);
+}
+
+.course img {
+    width: 70%;
     display: block;
     margin: 0 auto;
-    width: 60%;
-    /* display: table; */
-    border-collapse: collapse;
+    padding: 20px
+
 }
 
-.table {
-    display: table;
-    /* border: 5px solid black; */
-    /* border-spacing: 100px; */
-    margin: auto;
+.course p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
 }
 
-.lesson {
-    padding:50px;
-    background-color: #ccc;
-    border-radius: 50px;
+/* pairnei to a paidi tou course */
+.course>a {
+    padding-left: 40px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.row {
-    display: table-row;
-    margin: 10px;
+/* opoiodhpote apogono tou course */
+.course a {
+    color:black;
 }
 
-.cell {
-    display: table-cell;
-    border: 20px solid transparent;
-    background-clip: padding-box;
+.course a:visited {
+    color:black
 }
+/* __SUBJECTS__ */
 
-.subject a {
-    text-decoration: none;
-}
-
-.subject a:hover {
-    text-decoration: underline;
-}
-
-/*-----------CONTACT-----------------*/
+/* __CONTACT__ */
 
 form{
     background-color: #6c7a89;
@@ -464,4 +490,4 @@ input:valid{
     background-color: greenyellow;
 }
 
-/*-------------------CONTACT-----------------------------*/
+/* __CONTACT__ */

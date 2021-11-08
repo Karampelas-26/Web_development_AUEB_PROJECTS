@@ -334,10 +334,6 @@ ti fwtografia apo header kai tin morfopoihsei */
     vertical-align: middle;
 }
 
-.photo-details img {
-    /* float: left; */
-}
-
 .photo-details ul {
     /* float: right; */
     /* list-style: none; */
@@ -429,3 +425,60 @@ ti fwtografia apo header kai tin morfopoihsei */
 .subject a:hover {
     text-decoration: underline;
 }
+
+
+/*-----------CONTACT-----------------*/
+
+form{
+    background-color: #6c7a89;
+    width: 400px;
+    height: 750px;
+    margin: 40px auto;
+    border-radius: 50px;
+}
+
+.input{
+    background-color: #dfe1f1;
+    border-radius: 12px;
+    height: 50px;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.txt_input{
+    background-color: #dfe1f1;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    border-radius: 12px;
+}
+
+#contact_title{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.label{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_row{
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn{
+    margin-top: 20px;
+}
+
+input:valid{
+    background-color: greenyellow;
+}
+
+/*-------------------CONTACT-----------------------------*/

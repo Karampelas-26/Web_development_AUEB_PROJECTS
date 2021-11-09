@@ -382,10 +382,10 @@ ti fwtografia apo header kai tin morfopoihsei */
 
 /*__TOPICS__*/
 
-/* SUBJECTS */
+/*------------------SUBJECTS-----------------------------*/
 
 .subject {
-    /* border: 5px solid black; */
+    border: 1px solid black;
     padding: 30px;
     display: block;
     margin: 0 auto;
@@ -398,13 +398,13 @@ ti fwtografia apo header kai tin morfopoihsei */
     display: table;
     /* border: 5px solid black; */
     /* border-spacing: 100px; */
-    
+    margin: auto;
 }
 
 .lesson {
     padding:50px;
     background-color: #ccc;
-    border-radius: 100px;
+    border-radius: 50px;
 }
 
 .row {
@@ -425,7 +425,6 @@ ti fwtografia apo header kai tin morfopoihsei */
 .subject a:hover {
     text-decoration: underline;
 }
-
 
 /*-----------CONTACT-----------------*/
 

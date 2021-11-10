@@ -10,12 +10,6 @@ body {
     background-color: #e4f1fe;
 }
 
-/* einai mia klassi gia na yparxei kati
-na scrollaroume */
-.cont {
-    height: 800px;
-}
-
 /* position fixed gia na menei sto screen view
 kai overflow hidden gia na min emfanizetai tipota 
 pisw apo to menu mas */

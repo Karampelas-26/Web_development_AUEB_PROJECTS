@@ -31,6 +31,7 @@ header {
     overflow: hidden;
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 main {
@@ -138,7 +139,180 @@ analoges morfopoihseis sta a kai h1*/
     font-size: 25px;
 }
 
+/* HOMEPAGE main content */
+/* se olo to content xrhsimopoioume tin class 
+container brisketai pio katw sto idio arxeio css*/
 
+
+/* aside and our vision */
+
+.top-entity-container {
+    display: block;
+    padding: 20px 40px 40px 40px;
+    height: 750px;
+}
+/* css rules for aside */
+.offers {
+    float: right;
+    width: 20%;
+    padding: 0 15px;
+    margin-right: 10px;
+    background-color: #34495e;
+    border-radius: 35px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+.offers a {
+    color: #000;
+    text-decoration: none;
+}
+
+.course-in-offer {
+    width: 98%;
+    border-radius: 25px;
+    margin-top: 10px;
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+}
+
+/* exoume kanoniko width 98% kai 
+otan kanoyme hover ginetai 100%*/
+.course-in-offer:hover {
+    width: 100%;
+}
+
+.course-in-offer img {
+    width: 30%;
+    /* kanoume to img apo inline se block
+    kai bazoume margin 0 top-bottom kai
+    auto left-rigth gia na paei sti mesi */
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.course-in-offer p:nth-child(1){
+    padding-top: 10px;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.course-in-offer p:last-child {
+    padding-bottom: 10px;
+}
+
+del {
+    color: rgb(238, 93, 93);
+    font-weight: 600;
+}
+
+ins {
+    text-decoration: none;
+    font-weight: 900;
+    color: rgb(70, 177, 70);
+}
+
+/* our vision rules */
+
+.article-container {
+    float: left;
+    display: block;
+    width: 55%;
+    height: 80%;
+    background-color: #404040;
+    color: #fff;
+    margin: 0 40px 40px 40px;
+    padding: 80px;
+    border-radius: 35px;
+}
+
+.left-cont {
+    float: left;
+    width: 50%;
+}
+
+.left-cont p {
+    font-size: 20px;
+    width: 80%;
+}
+
+.right-cont {
+    float: right;
+    width: 50%;
+}
+.right-cont img {
+    width: 80%;
+    height: 80%;
+}
+
+.right-cont a {
+    display: block;
+    width: 40%;
+    background-color: #fff;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.blog-container {
+    display: block;
+    margin:0px auto;
+}
+.blog-container>h1 {
+    text-align:center;
+    font-size: 45px;
+    font-weight: 900;
+    padding-top: 40px;
+}
+.all-blogs {
+    display: block;
+    padding:  0px 40px 80px 40px;
+}
+
+.single-blog {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 33.33%;
+    padding: 0px 30px;
+    vertical-align: top;
+}
+
+.single-blog a {
+    text-decoration: none;
+    color: #000;
+}
+.blog {
+    border-radius: 25px;
+    background-color: #fff;
+    display: block;
+}
+
+.blog:hover {
+    box-shadow: 0 16px 30px rgba(0,0,0,.16);
+}
+
+.blog img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.blog p {
+    font-size: 14px;
+    padding: 0px 20px 15px 20px;
+}
+
+.blog h1 {
+    text-align: center;
+    padding: 15px 10px 0px 10px;
+}
 
 /*na allaksoume to onoma se copyright */
 .copyright {
@@ -344,7 +518,7 @@ ti fwtografia apo header kai tin morfopoihsei */
     margin: 0px; 
     display: block;
     transition: .3s box-shadow;
-    box-shadow: 0 4px 16px rgba(75, 59, 59, 0.0);
+    box-shadow: 10 4px 16px rgba(75, 59, 59, 0.0);
 }
 .topic:hover {
     box-shadow: 0 16px 30px rgba(0,0,0,.16);

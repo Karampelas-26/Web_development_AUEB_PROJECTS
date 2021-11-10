@@ -11,47 +11,181 @@
 </head>
 
 <body>
-    <div class="cont">
-        <header class="menu">
-            <!--homepage-->
-            <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
-            <!--menu-->
-            <nav>
-                <ul>
-                    <li><a href="topics.html">Topics</a></li>
-                    <li><a href="about_us.html">About us</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header class="menu">
+        <!--homepage-->
+        <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+        <!--menu-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="about_us.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
+    <main>
 
-            <div class="offers">
-                <h1>Special Offers!</h1>
-                <p>First-time customers have the advantages of some significant discounts.</p>
-                
-                <section>
-                    <img src="img/java.png" alt="java">
-                    <p>New customers discount: 250$ -> 146$</p>
-                </section>
-
-                <section>
-                    <img src="img/python.png" alt="python">
-                    <p>New customers discount: 570$ -> 425$</p>
-                </section>
-
-                <section>
-                    <img src="img/html.png" alt="html">
-                    <p>New customers discount: 230$ -> 146$</p>
-                </section>
+        <main >
+            <div class="top-entity-container"> 
+                <div class="aside-left-side">
+                    <aside class="offers">
+                        <h1>Special Offers!</h1>
+                        <p>First-time customers have the advantages of some significant discounts.</p>
+                        <div>
+                            <a href="cs_subject.html">
+                                <section class="course-in-offer">
+                                    <p>Introduction to java programming language.</p>
+                                    <img src="img/java.png" alt="java">
+                                    <p><del>250$</del> <ins>146$</ins></p>
+                                </section>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="data_science_subject.html">
+                                <section class="course-in-offer">
+                                    <p>Introduction to data mining.</p>
+                                    <img src="img/data_mining.png" alt="data-mining">
+                                    <p><del>125$</del> <ins>85$</ins></p>
+                                </section>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="bm_subject.html">
+                                <section class="course-in-offer">
+                                    <p>Introduction to Economics.</p>
+                                    <img src="img/economics.png" alt="economics">
+                                    <p><del>165$</del> <ins>145$</ins></p>
+                                </section>
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+                <div class="article-container">
+                    <article>
+                        <div class="left-cont">
+                            <h1>Our Vision</h1>
+                            <p>Our vision is to provide complete online courses for undergraduate students and for all those who
+                                want to
+                                expand their knowledge and learn important and up-to-date tools. Our basic principle is to
+                                provide some
+                                of the most basic lessons for beginners and more difficult lessons for advanced to stand out in
+                                the
+                                crowd. We always keep the level of courses high and try to keep costs as affordable as possible
+                                for the
+                                quality we offer.</p>
+                        </div>
+                        <div class="right-cont">
+                            <img src="img/Our_Vision-removebg-preview.png" alt="our_vision">
+                            <a href="about_us.html">Learn About Us</a>
+                        </div>
+                        
+                    </article>
+                </div>
             </div>
+           <section class="blog-container">
+                <h1>Blogs</h1>
+                <div class="all-blogs">
+                    <div class="single-blog">
+                        <a
+                            href="https://betterprogramming.pub/15-javascript-code-snippets-and-their-dart-counterparts-45a9427c8366">
+                            <article class="blog">
+                                <h1>15 JavaScript Code Examples and Their Dart Counterparts</h1>
+                                <img src="img/blog1.png" alt="blog photo flutter / react native">
+                                <p>As a React/React Native developer who has recently been working more with Flutter, I’ve run into
+                                    cases where I would use JavaScript but needed to look up the Dart equivalent.
+                                    In this post, I’ll be sharing a list of common JavaScript methods and what their equivalent
+                                    method would be in Flutter’s Dart files.</p>
+                                <p><time>9/11/2021</time></p>
+                            </article>
+                        </a>
+                    </div><!--
+                    --><div class="single-blog">
+                        <a
+                            href="https://betterprogramming.pub/passing-any-type-in-c-like-in-python-to-simplify-our-code-3af72347282d">
+                            <article class="blog">
+                                <h1>Passing Any Type in C++ Like in Python to Simplify Our Code</h1>
+                                <img src="img/blog2.png" alt="blog photo flutter / react native">
+                                <p>We discuss why we need to use Any Type, with examples, followed by 
+                                    how it is implemented using the Type Erasure technique, 
+                                    and finally how it allocates memory to see whether it fits our 
+                                    needs for writing our applications in C++.</p>
+                                <p><time>8/11/2021</time></p>
+                            </article>
+                        </a>
+                    </div><!--
+                    --><div class="single-blog">
+                        <a
+                            href="https://myprogrammingblog.com/2016/10/18/best-seo-plugins-wordpress/">
+                            <article class="blog">
+                                <h1>Best SEO Plugins for WordPress</h1>
+                                <img src="img/blog3.png" alt="blog photo flutter / react native">
+                                <p>SEO has become more important than it was ever before. So choosing 
+                                    the right SEO plugin has become very crucial in the highly competitive 
+                                    tech space. Here I am with the review of – SEOPressor, Yoast SEO, 
+                                    and WP Social SEO Pro – the best SEO plugins for WordPress.</p>
+                                <p><time>18/10/2016</time></p>
+                            </article>
+                        </a>
+                    </div><!--
+                    --><div class="single-blog">
+                        <a
+                            href="https://myprogrammingblog.com/2016/11/22/top-5-wordpress-ab-testing-plugins/">
+                            <article class="blog">
+                                <h1>Top 5 WordPress AB Testing Plugins</h1>
+                                <img src="img/blog4.png" alt="blog photo flutter / react native">
+                                <p>As a React/React Native developer who has recently been working more with Flutter,
+                                    I’ve
+                                    run into
+                                    cases where I would use JavaScript but needed to look up the Dart equivalent.
+                                    In this post, I’ll be sharing a list of common JavaScript methods and what their
+                                    equivalent
+                                    method would be in Flutter’s Dart files.</p>
+                                <p><time>22/11/2016</time></p>
+                            </article>
+                        </a>
+                    </div><!--
+                    --><div class="single-blog">
+                        <a
+                            href="https://myprogrammingblog.com/2016/11/08/best-wordpress-hosting-companies/">
+                            <article class="blog">
+                                <h1>Best WordPress Hosting Companies</h1>
+                                <img src="img/blog5.png" alt="blog photo flutter / react native">
+                                <p>Finding the best WordPress hosting company can be a time-consuming process. 
+                                    A solution that ensures rock-solid reliability, relevant content, and cost-effective price, 
+                                    is essential to unearth. The web hosting market has become exceedingly competitive with the 
+                                    emergence of WordPress-focused companies. It’s tricky to wade through the infinite packages 
+                                    and features to choose the best WordPress hosting service for your business.</p>
+                                <p><time>6/10/2016</time></p>
+                            </article>
+                        </a>
+                    </div><!--
+                    --><div class="single-blog">
+                        <a
+                            href="https://myprogrammingblog.com/2016/03/09/responsive-web-design-how-to-determine-device-resolution-to-target/">
+                            <article class="blog">
+                                <h1>Responsive Web Design : What resolutions to target?</h1>
+                                <img src="img/blog6.png" alt="blog photo flutter / react native">
+                                <p>Of course knowing your audience and analyzing their browser resolutions 
+                                    might give you better clues of what best suits your particular needs. 
+                                    If you don’t know your audience just yet, those 3 resolutions 
+                                    (320 px, 768 px and 1200 px), cover widest spectrum of devices 
+                                    without going too granular.</p>
+                                <p><time>12/10/2016</time></p>
+                            </article>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-            <div class="quote">
-                <!-- section pou tha mpei quote pou tha exei koumpi gia na pigainei sto about us-->
-            </div>
+
+
+
+
         </main>
-    </div>
+    </main>
+
     <!--to footer tis istoselidas mas-->
     <footer class="footer">
         <!--stoixeia epikoinwnias-antonis-->

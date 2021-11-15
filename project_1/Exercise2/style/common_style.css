@@ -46,6 +46,17 @@ footer {
     font-style: italic; /* grammatoseira*/
     }
 
+  .antonis{
+    float: left;
+    padding-left: 500px;
+  }
+
+  .george {
+    float: right;
+    padding-right: 500px;
+  }
+
+
 /*-----------------------------------------------------------*/
 
 /*alla*/

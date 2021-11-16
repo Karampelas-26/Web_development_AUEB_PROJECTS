@@ -16,32 +16,17 @@ body {
     background-color: #e4f1fe;
 }
 
-.wrapper{
-    display: grid;
-    grid-gap: 20px;
-}
-
-
-
-/* position fixed gia na menei sto screen view
-kai overflow hidden gia na min emfanizetai tipota 
-pisw apo to menu mas */
-header {
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-}
-
 /*class gia to menu*/
 .menu {
     background-color: #34495e;
-    display: inline-block; /*gia na emfanisei stin idia seira to logo kai ti lista*/
+    display: flex; /*gia na emfanisei stin idia seira to logo kai ti lista*/
     clear: both; /*clear: both gia na min exei elements na kanoyn float deksia kai aristera*/
+    justify-content: space-between;
+    align-items: center;
     width: 100%; 
     overflow: hidden;
-    position: fixed;
-    top: 0;
-    z-index: 1;
+    position: relative;
+    border: 1px solid black;
 }
 
 main {
@@ -50,7 +35,6 @@ main {
 
 /* gia to header bazoume me float 
 aristera to logo kai aristera to nav */
-
 .logo {
     float: left;
     width: auto;
@@ -78,13 +62,14 @@ bazontas ta li sti seira xwris bullets*/
 /*morfopoihseis gia ta grammata kai bgazoume 
 ta underline twn links gia na fainontai pio omorfa*/
 .menu nav li a {
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
     color: black;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 40px;
-    
+    padding-right: 40px;
+    padding-left: 40px;
+    border: 10px solid transparent;
 }
 
 /*gia na emfanizetai h allagh tou xrwmatos otan kanoume hover se olo to heigth tou header*/

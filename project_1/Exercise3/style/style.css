@@ -159,15 +159,18 @@ container brisketai pio katw sto idio arxeio css*/
 /* aside and our vision */
 
 .top-entity-container {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-row: 1fr;
     padding: 20px 40px 40px 40px;
-    height: 750px;
 }
 /* css rules for aside */
 .offers {
-    float: right;
-    width: 20%;
-    padding: 0 15px;
+    /* float: right; */
+    /* width: 20%; */
+    grid-column: 5/6;
+    grid-row: 1/2;
+    padding: 15px;
     margin-right: 10px;
     background-color: #34495e;
     border-radius: 35px;
@@ -230,13 +233,15 @@ ins {
 /* our vision rules */
 
 .article-container {
-    float: left;
-    display: block;
-    width: 55%;
-    height: 80%;
+    /* float: left; */
+    /* display: block; */
+    /* width: 55%; */
+    /* height: 80%; */
+    grid-column: 1/5;
+    grid-row: 1/2;
     background-color: #404040;
     color: #fff;
-    margin: 0 40px 40px 40px;
+    margin: 0 20px;
     padding: 80px;
     border-radius: 35px;
 }
@@ -281,16 +286,16 @@ ins {
     padding-top: 40px;
 }
 .all-blogs {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     padding:  0px 40px 80px 40px;
 }
 
 .single-blog {
-    display: inline-block;
     box-sizing: border-box;
-    width: 33.33%;
     padding: 0px 30px;
     vertical-align: top;
+    width: 33.33%;
 }
 
 .single-blog a {
@@ -308,8 +313,7 @@ ins {
 }
 
 .blog img {
-    width: 80%;
-    display: block;
+    width: 80%; 
     margin: 0 auto;
 }
 

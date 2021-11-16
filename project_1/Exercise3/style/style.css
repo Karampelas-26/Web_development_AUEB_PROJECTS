@@ -89,7 +89,9 @@ analoges morfopoihseis sta a kai h1*/
     background: gray;
     bottom: 0;
     left: 0;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3,1fr);
     width: 100%;
     height: 300px;
 }
@@ -100,18 +102,20 @@ analoges morfopoihseis sta a kai h1*/
 }
 
 .footer h1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
     font-size: 20px;
 }
 
 .rightAddress {
-    float: right;
-    width: 50%;
+    grid-column: 2/3;
+    grid-row: 2/3;
     text-align: left;
 }
 
 .leftAddress {
-    float: left;
-    width: 50%;
+    grid-column: 1/2;
+    grid-row: 2/3;
     text-align: right;
 }
 
@@ -133,6 +137,18 @@ analoges morfopoihseis sta a kai h1*/
 
 .footer ul li h1 {
     font-size: 25px;
+}
+
+.copyright {
+    grid-column: 1/5;
+    grid-row: 3/4;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    padding-top: 15px;
+    padding-left: 40px;
+    margin: 15px;
+    clear: both;
 }
 
 /* HOMEPAGE main content */
@@ -307,16 +323,7 @@ ins {
     padding: 15px 10px 0px 10px;
 }
 
-/*na allaksoume to onoma se copyright */
-.copyright {
-    text-align: center;
-    font-size: 15px;
-    font-weight: 300;
-    padding-top: 15px;
-    padding-left: 40px;
-    margin: 15px;
-    clear: both;
-}
+
 
 /*__ABOUT-US__*/
 
@@ -327,13 +334,23 @@ kai kala pws einai xeirografh */
 
 }
 
+.about-us-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 100px repeat(4,1fr);
+}
+
+/* .person {
+    display: flex;
+    flex-wrap: wrap;
+} */
 /* morfopoioume ta h1 me ta onomata mas
 me allo font, megethos, paxos, kai bazoume
 border mono sto katw meros tou onomatos 
 kai oxi sto text kanontas mia grammi apo katw */
 .black-text-bottom-border {
     font-family: 'Barlow', sans-serif;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 700;
     text-align: left;
     border-bottom: 7px solid black;
@@ -347,28 +364,30 @@ megethos wste na ta diaforopoihsoume kai na
 exoyn to border akribws to idio mikos me to 
 onoma mas */
 #george-karampelas-name {
-    width: 330px;
+    /* width: 50%; */
 }
 
 #antonis-xhristoulakis-name {
-    width: 365px;
+    /* width: 365px; */
 }
 
 #text-box-about-us {
     text-align: center;
     background-color: #34495e;
     color: #e4f1fe;
-    width: 500px;
+    /* width: 500px; */
     display: block;
+    grid-column: 1/6;
+    grid-row: 1/2;
     margin: auto;
-    font-size: 50px;
+    font-size: 40px;
     padding: 10px;
     border-radius: 50px;
 }
 /* bazoume section img wste na min epileksei 
 ti fwtografia apo header kai tin morfopoihsei */
 .rounded-img {
-    width: 350px;
+    width: 40%;
     height: auto;
     border-radius: 350px;
     margin-left: 100px;
@@ -378,9 +397,12 @@ ti fwtografia apo header kai tin morfopoihsei */
     padding: 40px;
     margin: 40px;
     background-color: #2574a9;
-    width: 75%;
-    float: left;
-    clear: both;
+    /* width: 75%; */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
+    grid-column: 1/4;
+    grid-row: 2/4;
     border-radius: 100px;
 }
 
@@ -394,7 +416,7 @@ ti fwtografia apo header kai tin morfopoihsei */
 .info {
     margin: 5px;
     width: 50%;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .info h2 {
@@ -402,21 +424,21 @@ ti fwtografia apo header kai tin morfopoihsei */
 }
 
 .person-george .name-photo {
-    float: left;
+    /* float: left; */
 }
 
 .person-george .info {
-    float: right;
+    /* float: right; */
     padding: 10px 60px;
     border-left: 4px solid black;
 }
 
 .person-antonis .name-photo {
-    float: right;
+    /* float: right; */
 }
 
 .person-antonis .info {
-    float: left;
+    /* float: left; */
     padding: 10px 60px;
     border-right: 4px solid black;
 }
@@ -434,9 +456,13 @@ ti fwtografia apo header kai tin morfopoihsei */
     background-color: #6c7a89;
     /* border: 5px solid yellow; */
     border-radius: 100px;
-    width: 75%;
-    float: right;
-    clear: both;
+    /* width: 75%; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    grid-column: 2/5;
+    grid-row: 4/6;
 }
 
 /*__ABOUT-US__*/

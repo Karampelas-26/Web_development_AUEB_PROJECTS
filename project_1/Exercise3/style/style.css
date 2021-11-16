@@ -93,7 +93,7 @@ analoges morfopoihseis sta a kai h1*/
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3,1fr);
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
 }
 
 #contact_footer {
@@ -483,23 +483,30 @@ ti fwtografia apo header kai tin morfopoihsei */
 
 
 .all-topics {
-    display: block;
-    max-width: 1260px;
+    display: grid;
+    /* max-width: 1260px; */
+    grid-template-rows: 160px 1fr;
+    grid-template-columns: repeat(3fr);
     margin: 0 auto;
 }
 
 
 .container {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
     margin-bottom: 50px;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr)); /*autofit gia na ta prosarmozei oso zoom in kai out kanoume*/
+    /* grid-template-columns: repeat(auto-fit,minmax(350px,1fr)); autofit gia na ta prosarmozei oso zoom in kai out kanoume */
 }
 
 .topic-container {
+    flex: 1;
     display: inline-block;
     box-sizing: border-box;
-    width: 33.33%;
+    /* width: 33.33%; */
     padding: 0px 20px;
+    margin-bottom: 40px;
     vertical-align: top;
 }
 

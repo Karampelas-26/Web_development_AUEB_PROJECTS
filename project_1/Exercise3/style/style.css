@@ -159,9 +159,6 @@ container brisketai pio katw sto idio arxeio css*/
     color: #fff;
 }
 
-
-
-
 .offers a {
     color: #000;
     text-decoration: none;
@@ -599,10 +596,14 @@ ftiaksame gia ta topics*/
 
 /* __CONTACT__ */
 
+.grid_wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    align-items: center;
+}
+
 form{
     background-color: #6c7a89;
-    width: 400px;
-    height: 750px;
     margin: 40px auto;
     border-radius: 50px;
 }

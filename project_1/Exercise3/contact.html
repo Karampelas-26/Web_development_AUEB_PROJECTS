@@ -26,48 +26,51 @@
     </header>
 
     <main>
-        <!-- stoixeia autou pou thelei na epikoinwnisei-->
-        <!--den xrisimopoiithike fieldset opws tin askisi 1 gia na bgei pio wraio apotelesma-->
-        <h1 id="contact_title">Contact Us</h1>
-        <form>
+        
+            <!-- stoixeia autou pou thelei na epikoinwnisei-->
+            <!--den xrisimopoiithike fieldset opws tin askisi 1 gia na bgei pio wraio apotelesma-->
+            <h1 id="contact_title">Contact Us</h1>
+        <div class="grid_wrapper">
+            <form>
 
-            <div class="input_row">
-                <label for="txt_last_name" class="label">Last name:</label><br>
-                <input type="text" id="txt_last_name" name="lastname" minlength="3" maxlength="15" autocomplete="name"
-                    placeholder="Your last name" class="input" autofocus>
-            </div>
+                <div class="input_row">
+                    <label for="txt_last_name" class="label">Last name:</label><br>
+                    <input type="text" id="txt_last_name" name="lastname" minlength="3" maxlength="15" autocomplete="name"
+                        placeholder="Your last name" class="input" autofocus>
+                </div>
 
-            <div class="input_row">
-                <label for="txt_name" class="label">Name:</label><br>
-                <input type="text" id="txt_name" name="name" minlength="3" maxlength="15" autocomplete="name"
-                    placeholder="Your name" class="input"></div>
+                <div class="input_row">
+                    <label for="txt_name" class="label">Name:</label><br>
+                    <input type="text" id="txt_name" name="name" minlength="3" maxlength="15" autocomplete="name"
+                        placeholder="Your name" class="input"></div>
 
-            <div class="input_row">
-                <label for="txt_telephone" class="label">Telephone:</label>
-                <input type="text" id="txt_telephone" name="telephone" placeholder="e.g. 69xxxxxxxx" pattern="[0-9]{10}"
-                    autocomplete="tel" required class="input"></div>
+                <div class="input_row">
+                    <label for="txt_telephone" class="label">Telephone:</label>
+                    <input type="text" id="txt_telephone" name="telephone" placeholder="e.g. 69xxxxxxxx" pattern="[0-9]{10}"
+                        autocomplete="tel" required class="input"></div>
 
-            <div class="input_row">
-                <label for="txt_email" class="label">Email:</label><br>
-                <input type="email" id="txt_email" name="email" autocomplete="email" placeholder="e.g. example@mail.com"
-                    required class="input"></div>
+                <div class="input_row">
+                    <label for="txt_email" class="label">Email:</label><br>
+                    <input type="email" id="txt_email" name="email" autocomplete="email" placeholder="e.g. example@mail.com"
+                        required class="input"></div>
 
-            <div class="input_row">
-                <h4>Gender:</h4>
+                <div class="input_row">
+                    <h4>Gender:</h4>
 
-                <label for="male">Male</label>
-                <input type="radio" id="male" checked="checked" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" checked="checked" name="gender" value="Male">
 
-                <label for="female">Female</label>
-                <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="Female">
 
-            </div>
+                </div>
 
-            <textarea rows="4" cols="50" name="message" form="usrform" placeholder="Enter your message here..." required
-                class="txt_input"></textarea>
+                <textarea rows="4" cols="50" name="message" form="usrform" placeholder="Enter your message here..." required
+                    class="txt_input"></textarea>
 
-            <input type="submit" value="Submit" class="input_row btn">
-        </form>
+                <input type="submit" value="Submit" class="input_row btn">
+            </form>
+        </div>
     </main>
 
     <!--to footer tis istoselidas mas-->

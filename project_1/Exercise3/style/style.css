@@ -1,5 +1,22 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow&family=Rubik&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow&family=Rubik&display=swap'); */
+
+@font-face {
+    font-family: 'Rubik', sans-serif;
+    src: url('fonts/Rubik/static/Rubik-Medium.ttf') format('truetype');
+    src: url('fonts/Barlow/Barlow-Regular.ttf') format('truetype');
+    
+}
+
+@font-face {
+    font-family: 'Architects Daughter', sans-serif;
+    src: url('fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Barlow', sans-serif;
+    src: url('fonts/Barlow/Barlow-Regular.ttf') format('truetype');
+}
 
 .content-wrapper{
     display: grid;

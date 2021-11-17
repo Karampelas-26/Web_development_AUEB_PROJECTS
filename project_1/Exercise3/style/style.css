@@ -1,14 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow&family=Rubik&display=swap');
 
-/* @font-face {
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-B4iFWUU1Z4Y.woff) format('woff');
-} */
-
+.content-wrapper{
+    display: grid;
+}
 /*font apo to fonts.google.com*/
 body {
     font-family: 'Rubik', sans-serif;
@@ -27,7 +22,6 @@ body {
     width: 100%; 
     overflow: hidden;
     position: relative;
-    border: 1px solid black;
 }
 
 main {
@@ -93,7 +87,6 @@ analoges morfopoihseis sta a kai h1*/
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3,1fr);
     width: 100%;
-    /* height: 300px; */
 }
 
 #contact_footer {
@@ -155,19 +148,15 @@ analoges morfopoihseis sta a kai h1*/
 /* se olo to content xrhsimopoioume tin class 
 container brisketai pio katw sto idio arxeio css*/
 
-
 /* aside and our vision */
-
 .top-entity-container {
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-row: 1fr;
-    padding: 20px 40px 40px 40px;
 }
+
 /* css rules for aside */
 .offers {
-    /* float: right; */
-    /* width: 20%; */
     grid-column: 5/6;
     grid-row: 1/2;
     padding: 15px;
@@ -231,12 +220,7 @@ ins {
 }
 
 /* our vision rules */
-
 .article-container {
-    /* float: left; */
-    /* display: block; */
-    /* width: 55%; */
-    /* height: 80%; */
     grid-column: 1/5;
     grid-row: 1/2;
     background-color: #404040;
@@ -244,6 +228,11 @@ ins {
     margin: 0 20px;
     padding: 80px;
     border-radius: 35px;
+    min-width: 100px;
+}
+
+.article-container img{
+    width: 80%;
 }
 
 .left-cont {
@@ -286,16 +275,14 @@ ins {
     padding-top: 40px;
 }
 .all-blogs {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    padding:  0px 40px 80px 40px;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
 }
 
 .single-blog {
     box-sizing: border-box;
     padding: 0px 30px;
-    vertical-align: top;
-    width: 33.33%;
 }
 
 .single-blog a {
@@ -314,7 +301,7 @@ ins {
 
 .blog img {
     width: 80%; 
-    margin: 0 auto;
+    margin:  auto;
 }
 
 .blog p {
@@ -326,8 +313,6 @@ ins {
     text-align: center;
     padding: 15px 10px 0px 10px;
 }
-
-
 
 /*__ABOUT-US__*/
 
@@ -344,10 +329,6 @@ kai kala pws einai xeirografh */
     grid-template-rows: 100px repeat(4,1fr);
 }
 
-/* .person {
-    display: flex;
-    flex-wrap: wrap;
-} */
 /* morfopoioume ta h1 me ta onomata mas
 me allo font, megethos, paxos, kai bazoume
 border mono sto katw meros tou onomatos 
@@ -362,24 +343,11 @@ kai oxi sto text kanontas mia grammi apo katw */
     margin: 15px 100px;
 }
 
-/* diaforetika id gia ta h1
-me ta onomata mas giati exoun diaforetiko
-megethos wste na ta diaforopoihsoume kai na 
-exoyn to border akribws to idio mikos me to 
-onoma mas */
-#george-karampelas-name {
-    /* width: 50%; */
-}
-
-#antonis-xhristoulakis-name {
-    /* width: 365px; */
-}
 
 #text-box-about-us {
     text-align: center;
     background-color: #34495e;
     color: #e4f1fe;
-    /* width: 500px; */
     display: block;
     grid-column: 1/6;
     grid-row: 1/2;
@@ -401,10 +369,8 @@ ti fwtografia apo header kai tin morfopoihsei */
     padding: 40px;
     margin: 40px;
     background-color: #2574a9;
-    /* width: 75%; */
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: flex-start; */
     grid-column: 1/4;
     grid-row: 2/4;
     border-radius: 100px;
@@ -427,22 +393,12 @@ ti fwtografia apo header kai tin morfopoihsei */
     text-decoration: underline;
 }
 
-.person-george .name-photo {
-    /* float: left; */
-}
-
 .person-george .info {
-    /* float: right; */
     padding: 10px 60px;
     border-left: 4px solid black;
 }
 
-.person-antonis .name-photo {
-    /* float: right; */
-}
-
 .person-antonis .info {
-    /* float: left; */
     padding: 10px 60px;
     border-right: 4px solid black;
 }

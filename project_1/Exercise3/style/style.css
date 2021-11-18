@@ -90,6 +90,8 @@ ta underline twn links gia na fainontai pio omorfa*/
     color: #009bff;
 }
 
+
+
 /* bazoume topo8etoume sto telos tis selidas to footer 
 bazontas aristera kai deksia to onoma/epwnumo kai ta 
 stoixeia epikoinwnias toy kathe melous ths omadas,
@@ -489,6 +491,7 @@ ti fwtografia apo header kai tin morfopoihsei */
 
 .topic-container a {
     text-decoration: none;
+    color: black;
 }
 
 .topic-container a:visited {

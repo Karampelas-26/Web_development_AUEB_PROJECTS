@@ -58,7 +58,18 @@
                         <article class="topic">
                             <p id='data-science'>Data Science</p>
                             <div>
-                                <img src="img/data_science.png" alt="data_science" class="topic-img">
+                                <picture>
+                                    <source 
+                                    srcset="img/100px/data_science.png"
+                                    media="(max-width: 468px)">
+                                    <source 
+                                    srcset="img/300px/data_science.png"
+                                    media="(min-width: 469px) and (max-width: 768px)">
+                                    <source 
+                                    srcset="img/600px/data_science.png"
+                                    media="(min-width: 769px)">
+                                    <img src="img/600px/data_science.png" alt="data_science" class="topic-img">
+                                </picture>
                                 <p>Courses:</p>
                                 <ul>
                                     <li>Artificial Intelligence</li>

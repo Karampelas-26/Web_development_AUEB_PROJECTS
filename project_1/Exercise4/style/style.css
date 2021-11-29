@@ -428,7 +428,6 @@ ins {
 kai kala pws einai xeirografh */
 .biography {
     font-family: 'Architects Daughter', cursive;
-
 }
 
 .about-us-wrapper {
@@ -533,6 +532,60 @@ ti fwtografia apo header kai tin morfopoihsei */
     justify-content: flex-end;
     grid-column: 2/5;
     grid-row: 4/6;
+}
+
+@media screen and (max-width: 480px){
+    .menu nav li a{
+        font-size: 15px;
+    }
+
+    #contact_footer{
+        font-size: 25px;
+    }
+
+    .footer ul li a{
+        font-size: 15px;
+    }
+
+    #text-box-about-us{
+        font-size: 30px;
+    }
+
+    .person-george{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 80%;
+    }
+
+    .name-photo{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 2px;
+        align-items: center;
+    }
+
+    #george-karampelas-name{
+        font-size: 30px;
+    }
+    
+    .black-text-bottom-border{ /*gia na paei to keimeno sti mesi*/
+        margin: auto;
+    }
+
+    .rounded-img{
+        margin: auto;
+        margin-left: 50px;
+        margin-top: 15px;
+    }
+
+    .person-antonis{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 80%;
+        margin-left: 0px;
+    }
 }
 
 /*__ABOUT-US__*/
@@ -705,6 +758,28 @@ ftiaksame gia ta topics*/
 
 /* __CONTACT__ */
 
+@media screen and (max-width: 480px){
+    .menu nav li a{
+        font-size: 15px;
+    }
+
+    #contact_footer{
+        font-size: 25px;
+    }
+
+    .footer ul li a{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+}
+
 .grid_wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -756,5 +831,6 @@ form {
 .btn {
     margin-top: 20px;
 }
+
 
 /* __CONTACT__ */

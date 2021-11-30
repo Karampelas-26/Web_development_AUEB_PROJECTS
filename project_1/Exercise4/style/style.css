@@ -140,7 +140,7 @@ analoges morfopoihseis sta a kai h1*/
 }
 
 .footer ul li {
-    margin: 0px;
+    margin: 0;
 }
 
 .footer ul li a {
@@ -171,6 +171,7 @@ analoges morfopoihseis sta a kai h1*/
         display: flex;
         flex-direction: column;
         position: relative;
+        width: 100%;
     }
 
     main {
@@ -198,12 +199,30 @@ analoges morfopoihseis sta a kai h1*/
     .footer {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
+        /* width: 100%; */
+
+    }
+
+    .footer h1 {
+        font-size: 15px;
+    }
+
+    #contact_footer{
+        font-size: 20px;
     }
 
     .leftAddress, .rightAddress {
         text-align: center;
     }
 
+    .footer ul li {
+
+    }
+    .copyright {
+        margin: 10px 0px;
+        padding: 0px;
+    }
 }
  
 /* tablet */
@@ -535,38 +554,74 @@ ti fwtografia apo header kai tin morfopoihsei */
 }
 
 @media screen and (max-width: 480px){
-    .menu nav li a{
+    /* .menu nav li a{
         font-size: 15px;
-    }
+    } */
 
-    #contact_footer{
+    /* #contact_footer{
         font-size: 25px;
-    }
+    } */
 
-    .footer ul li a{
+    /* .footer ul li a{
         font-size: 15px;
-    }
-
-    #text-box-about-us{
-        font-size: 30px;
-    }
-
-    .person-george{
+    } */
+    /* .body
+    {
+        overflow-x: hidden;
+        width: 100%;
+    } */
+    /* .menu {
+        width: 80%;
+    } */
+    .about-us-wrapper {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+    #text-box-about-us{
+        font-size: 25px;
+        width: 80%;
+        margin: 10px 0px;
+        padding: 0;
+
+    }
+
+    .info {
+        margin: 0px;
+        padding: 0px 15px;
+        width: 70%;
+        text-align: center;
+    }
+
+    .person-george, .person-antonis{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         position: relative;
         width: 80%;
+        padding: 15px;
+        margin: 0px 10px 20px 10px;
+        border-radius: 25px;
+    }
+
+    .person-antonis .info, .person-george .info{
+        border-right: none;
+        border-left: none;
+        padding: 0;
     }
 
     .name-photo{
-        width: 80%;
-        margin: 0 auto;
-        margin-bottom: 2px;
+        /* width: 80%; */
+        /* margin: 0 auto; */
+        /* margin-bottom: 2px; */
+        /* align-items: center; */
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
 
-    #george-karampelas-name{
-        font-size: 30px;
+    #george-karampelas-name, #antonis-xhristoulakis-name{
+        font-size: 25px;
     }
     
     .black-text-bottom-border{ /*gia na paei to keimeno sti mesi*/
@@ -574,19 +629,95 @@ ti fwtografia apo header kai tin morfopoihsei */
     }
 
     .rounded-img{
-        margin: auto;
+        /* margin: auto;
         margin-left: 50px;
-        margin-top: 15px;
+        margin-top: 15px; */
+        width: 60%;
+        display: block;
+        margin: 10px auto;
+        padding: 0;
     }
 
-    .person-antonis{
+    /* .person-antonis{
         display: flex;
         flex-direction: column;
         position: relative;
         width: 80%;
         margin-left: 0px;
-    }
+    } */
 }
+
+/* tablet */
+@media screen and (min-width: 469px) and (max-width: 768px) {
+
+    .about-us-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #text-box-about-us{
+        font-size: 30px;
+        width: 60%;
+        margin: 25px 0px;
+        padding: 0;
+
+    }
+
+    .info {
+        margin: 0px;
+        padding: 30px;
+        width: 90%;
+        font-size: 20px;
+        /* text-align: ; */
+    }
+
+    .person-george, .person-antonis{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 80%;
+        padding: 15px;
+        margin: 0px 10px 20px 10px;
+        border-radius: 100px;
+    }
+
+    .person-antonis .info, .person-george .info{
+        border-right: none;
+        border-left: none;
+        padding: 0;
+    }
+
+    .name-photo{
+        /* width: 80%; */
+        /* margin: 0 auto; */
+        /* margin-bottom: 2px; */
+        /* align-items: center; */
+        display: flex;
+        /* flex-direction:column-reverse; */
+        align-items: center;
+    }
+
+    #george-karampelas-name, #antonis-xhristoulakis-name{
+        font-size: 35px;
+    }
+    
+    .black-text-bottom-border{ /*gia na paei to keimeno sti mesi*/
+        margin: auto;
+    }
+
+    .rounded-img{
+        /* margin: auto;
+        margin-left: 50px;
+        margin-top: 15px; */
+        width: 60%;
+        display: block;
+        margin: 30px auto;
+        padding: 0;
+    }
+
+}
+
 
 /*__ABOUT-US__*/
 

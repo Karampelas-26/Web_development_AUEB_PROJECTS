@@ -29,6 +29,7 @@ body {
     /*gia na min exei keno gyro gyro*/
     background-color: #e4f1fe;
     overflow-x: hidden;
+    width: 100%;
 }
 
 /*class gia to menu*/
@@ -215,10 +216,6 @@ analoges morfopoihseis sta a kai h1*/
     .leftAddress, .rightAddress {
         text-align: center;
     }
-
-    .footer ul li {
-
-    }
     .copyright {
         margin: 10px 0px;
         padding: 0px;
@@ -226,7 +223,7 @@ analoges morfopoihseis sta a kai h1*/
 }
  
 /* tablet */
-@media screen and (min-width: 469px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
 
     main {
         margin-top: 0;
@@ -391,7 +388,8 @@ ins {
 .blog-container {
     display: block;
     margin: 0px auto;
-}
+    width: 100%;
+}   
 
 .blog-container>h1 {
     text-align: center;
@@ -441,6 +439,66 @@ ins {
     padding: 15px 10px 0px 10px;
 }
 
+@media screen and (max-width: 480px) {
+    
+    .top-entity-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offers {
+        width: 80%;
+        margin: 15px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .course-in-offer {
+        width: 80%;
+    }
+
+    .course-in-offer:hover {
+        width: 82%;
+    }
+
+    .article-container {
+        padding: 15px;
+        width: 80%;
+    }
+
+    .article-container article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-container article h1 {
+
+        padding: 10px;
+        margin:0px;
+    }
+
+    .article-container article p {
+        padding: 0px 10px;
+        margin: 0px;
+    }
+
+    .article-container article picture {
+        /* display: block; */
+        text-align: center;
+        margin: 20px auto;
+        
+    }
+
+    .article-container article a {
+        width: 40%;
+        background-color: #fff;
+        color: #000;
+        border-radius: 25px;
+        text-align: center;
+    }
+}
 /*__ABOUT-US__*/
 
 /* allazoume to font wste na fainetai
@@ -648,7 +706,7 @@ ti fwtografia apo header kai tin morfopoihsei */
 }
 
 /* tablet */
-@media screen and (min-width: 469px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
 
     .about-us-wrapper {
         display: flex;

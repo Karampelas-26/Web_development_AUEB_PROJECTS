@@ -424,8 +424,10 @@ ins {
     box-shadow: 0 16px 30px rgba(0, 0, 0, .16);
 }
 
-.blog img {
+.blog picture img {
     width: 80%;
+    /* text-align: center; */
+    display: block;
     margin: auto;
 }
 
@@ -462,6 +464,49 @@ ins {
         width: 82%;
     }
 
+    .article-container {
+        padding: 15px;
+        width: 80%;
+    }
+
+    .article-container article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-container article h1 {
+
+        padding: 10px;
+        margin:0px;
+    }
+
+    .article-container article p {
+        padding: 0px 10px;
+        margin: 0px;
+    }
+
+    .article-container article picture {
+        /* display: block; */
+        text-align: center;
+        margin: 20px auto;
+        
+    }
+
+    .article-container article a {
+        width: 40%;
+        background-color: #fff;
+        color: #000;
+        border-radius: 25px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    
+    .top-entity-container {
+        margin-top: 30px;
+    }
     .article-container {
         padding: 15px;
         width: 80%;
@@ -690,7 +735,7 @@ ti fwtografia apo header kai tin morfopoihsei */
         /* margin: auto;
         margin-left: 50px;
         margin-top: 15px; */
-        width: 60%;
+        width: 100%;
         display: block;
         margin: 10px auto;
         padding: 0;

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Next Graduate - Contact Us</title>
+    <!--meta gia na emfanizetai swsta se diaforetikes othones syskeywn-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="icon" href="img/logo.png" type="text/x-icon">
+</head>
+
+<body>
+    <div class="content-wrapper">
+    <header class="menu">
+        <!--homepage-->
+        <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+        <!--menu-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="about_us.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="Sign Up">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+            <!-- stoixeia autou pou thelei na epikoinwnisei-->
+            <!--den xrisimopoiithike fieldset opws tin askisi 1 gia na bgei pio wraio apotelesma-->
+            <h1 id="contact_title">Contact Us</h1>
+        <div class="grid_wrapper">
+            <form>
+
+                <div class="input_row">
+                    <label for="txt_last_name" class="label">Last name:</label><br>
+                    <input type="text" id="txt_last_name" name="lastname" minlength="3" maxlength="15" autocomplete="name"
+                        placeholder="Your last name" class="input" autofocus>
+                </div>
+
+                <div class="input_row">
+                    <label for="txt_name" class="label">Name:</label><br>
+                    <input type="text" id="txt_name" name="name" minlength="3" maxlength="15" autocomplete="name"
+                        placeholder="Your name" class="input"></div>
+
+                <div class="input_row">
+                    <label for="txt_telephone" class="label">Telephone:</label>
+                    <input type="text" id="txt_telephone" name="telephone" placeholder="e.g. 69xxxxxxxx" pattern="[0-9]{10}"
+                        autocomplete="tel" required class="input"></div>
+
+                <div class="input_row">
+                    <label for="txt_email" class="label">Email:</label><br>
+                    <input type="email" id="txt_email" name="email" autocomplete="email" placeholder="e.g. example@mail.com"
+                        required class="input"></div>
+
+                <div class="input_row">
+                    <h4>Gender:</h4>
+
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" checked="checked" name="gender" value="Male">
+
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+
+                </div>
+
+                <textarea rows="4" cols="50" name="message" form="usrform" placeholder="Enter your message here..." required
+                    class="txt_input"></textarea>
+
+                <input type="submit" value="Submit" class="input_row btn">
+            </form>
+        </div>
+    </main>
+
+    <!--to footer tis istoselidas mas-->
+    <footer class="footer">
+        <!--stoixeia epikoinwnias-antonis-->
+        <h1 id="contact_footer">Contact</h1>
+        <div class="leftAddress">
+            <address>
+                <ul>
+                    <li>
+                        <h1>Antonios Christoulakis</h1>
+                    </li>
+                    <li><a href="mailto:p3180207@aueb.gr">Email: p3180207@aueb.gr</a></li>
+                    <li><a href="tel:+30698723987">Telephone: 698723987</a></li>
+                    <li><a href="https://github.com/xristoulakhs">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/antonis-xristoulakis-31493220b/">LinkedIn</a></li>
+                </ul>
+            </address>
+        </div>
+        <div class="rightAddress">
+            <!--stoixeia epikoinwnias-giorgos-->
+            <address>
+                <ul>
+                    <li>
+                        <h1>Georgios Karampelas</h1>
+                    </li>
+                    <li><a href="mailto:p3180072@aueb.gr">Email: p3180072@aueb.gr</a></li>
+                    <li><a href="tel:+306945227237">Telephone: 6945227237</a></li>
+                    <li><a href="https://github.com/Karampelas-26">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/giorgos-karampelas-28669a19b/">LinkedIn</a></li>
+                </ul>
+            </address>
+        </div>
+        <p class="copyright">© Copyright | Next Graduate</p>
+    </footer>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Next Graduate - Sing Up</title>
+    <!--meta gia na emfanizetai swsta se diaforetikes othones syskeywn-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="icon" href="img/logo.png" type="text/x-icon">
+    <script src="logIn.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <header class="menu">
+        <!--homepage-->
+        <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+        <!--menu-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="about_us.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="logIn.html">Sing Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="/" method="GET">       
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="fname">First Name</label>
+            <input type="text" id="fname" name="first-name" placeholder="Jack" required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="last-name" placeholder="Daniels">
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="user-address" autocomplete="street-address" placeholder="Patisiwn 279-281" required>
+
+            <label for="txt_city">City</label>
+            <input type="text" name="txt_city" id="city" placeholder="Athens">
+
+            <label for="txt_post_code">Post Code</label>
+            <input type="text" name="txt_post_code" id="post-code" placeholder="111 44">
+
+            <label for="bday">Birthday</label>
+            <input type="text" name="bday" id="user-birthday" autocomplete="bday" placeholder="1/1/2000" required>
+
+            <label for="choice_country">Country</label>
+            <input type="text" name="choice_country" id="user-country" autocomplete="country-name" placeholder="Greece">
+
+            <label for="tel-home-phone">Home Phone Number</label>
+            <input type="tel" name="tel-home-phone" id="tel-home-phone-number" placeholder="2#########" maxlength="10">
+
+            <label for="tel-mobile-phone">Mobile Phone Number</label>
+            <input type="tel" name="tel-mobile-phone" id="tel-mobile-phone-number" placeholder="69########" maxlength="10" required>
+            
+            <h1>Gender:</h1>
+
+            <label for="male">Male</label>
+            <input type="radio" id="male" checked="checked" name="gender" value="Male">
+
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="Female">
+
+            </fieldset>
+            <fieldset>
+                <legend>Payment Information</legend>
+
+                <label for="txt_type_credit_card">Type of Credit Card</label>
+                <select name="txt_type_credit_card" id="type_credit_card">
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">MasterCard</option>
+                </select>
+            
+                <label for="txt_credit_card_number">Credit Card Number</label>
+                <input type="text" name="txt_card_number" id="credit-card-id" autocomplete="cc-number" required>
+
+                <label for="txt_fullname">Full Name</label>
+                <input type="text" name="txt_fullname" id="fullname" autocomplete="cc-name" required>
+
+                <label for="select_expiration_date">Expiration Date</label>
+                <input type="text" name="select_expiration_date" id="expiration-date" placeholder="MM / YY" maxlength="7" required>
+
+                <label for="txt_CVV">CVV</label>
+                <input type="text" name="txt_CVV" id="card-CVV" maxlength=3 required>
+
+            </fieldset>
+            <fieldset>
+                <legend>User Information</legend>
+
+                <label for="txt_username">Username</label>
+                <input type="text" name="txt_username" id="username" required>
+
+                <label for="txt_username">Password</label>
+                <input type="password" name="txt_username" id="username"
+                    title="Your password must be at least 8 characters long and have to contain at least 1 digit, one letter, one capital letter and at least one special character ('-', '_', '@', '!', '#')."
+                    placeholder="Th!s-1S_Strong_P@ssword" required>
+
+                <label for="txt_username">Password Check</label>
+                <input type="password" name="txt_username" id="username"
+                    title="Your check-password must match with you Password." required>
+
+                <label for="user_email">Email</label>
+                <input type="email" name="user_email" id="user-email" pattern="" required>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Questionnaire</legend>
+
+                <label for="txt_question_one">Question One</label>
+                <input type="text" name="txt_question_one" id="question_one">
+
+                <label for="txt_question_two">Question Two</label>
+                <input type="text" name="txt_question_two" id="question_two">
+
+                <label for="txt_question_three">Question Three</label>
+                <input type="text" name="txt_question_three" id="question_three">
+
+                <label for="txt_question_four">Question Four</label>
+                <input type="text" name="txt_question_four" id="question_four">
+
+                <label for="txt_question_five">Question Five</label>
+                <input type="text" name="txt_question_five" id="question_five">
+
+                <label for="txt_question_six">Question Six</label>
+                <input type="text" name="txt_question_six" id="question_six">
+
+                <label for="txt_question_seven">Question Seven</label>
+                <input type="text" name="txt_question_seven" id="question_seven">
+
+                <label for="txt_question_eight">Question Eight</label>
+                <input type="text" name="txt_question_eight" id="question_eight">
+
+                <label for="txt_question_nine">Question Nine</label>
+                <input type="text" name="txt_question_nine" id="question_nine">
+
+                <label for="txt_question_ten">Question Ten</label>
+                <input type="text" name="txt_question_ten" id="question_ten">
+
+
+            </fieldset>
+            <input type="submit" onclick="onClickSubmit()" value="Submit" name="submit_btn" id="submit">
+        </form>
+    </main>
+
+    <footer class="footer">
+        <!--stoixeia epikoinwnias-antonis-->
+        <h1 id="contact_footer">Contact</h1>
+        <div class="leftAddress footer-grid-contacts">
+            <address>
+                <ul>
+                    <li>
+                        <h1>Antonios Christoulakis</h1>
+                    </li>
+                    <li><a href="mailto:p3180207@aueb.gr">Email: p3180207@aueb.gr</a></li>
+                    <li><a href="tel:+30698723987">Telephone: 698723987</a></li>
+                    <li><a href="https://github.com/xristoulakhs">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/antonis-xristoulakis-31493220b/">LinkedIn</a></li>
+                </ul>
+            </address>
+        </div>
+        <div class="rightAddress footer-grid-contacts">
+            <!--stoixeia epikoinwnias-giorgos-->
+            <address>
+                <ul>
+                    <li>
+                        <h1>Georgios Karampelas</h1>
+                    </li>
+                    <li><a href="mailto:p3180072@aueb.gr">Email: p3180072@aueb.gr</a></li>
+                    <li><a href="tel:+306945227237">Telephone: 6945227237</a></li>
+                    <li><a href="https://github.com/Karampelas-26">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/giorgos-karampelas-28669a19b/">LinkedIn</a></li>
+                </ul>
+            </address>
+        </div>
+        <p class="copyright">© Copyright | Next Graduate</p>
+    </footer>
+</body>
+
+</html>

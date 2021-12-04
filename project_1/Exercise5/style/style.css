@@ -19,7 +19,6 @@
 
 .content-wrapper {
     display: grid;
-    /* width: 100%; */
 }
 
 /*font apo to fonts.google.com*/
@@ -201,7 +200,6 @@ analoges morfopoihseis sta a kai h1*/
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        /* width: 100%; */
 
     }
 
@@ -426,7 +424,6 @@ ins {
 
 .blog picture img {
     width: 80%;
-    /* text-align: center; */
     display: block;
     margin: auto;
 }
@@ -487,7 +484,6 @@ ins {
     }
 
     .article-container article picture {
-        /* display: block; */
         text-align: center;
         margin: 20px auto;
         
@@ -530,7 +526,6 @@ ins {
     }
 
     .article-container article picture {
-        /* display: block; */
         text-align: center;
         margin: 20px auto;
         
@@ -611,7 +606,6 @@ ti fwtografia apo header kai tin morfopoihsei */
 .name-photo {
     padding: 10px;
     margin: 5px;
-    /* width: 35%; */
 }
 
 .info {
@@ -645,9 +639,7 @@ ti fwtografia apo header kai tin morfopoihsei */
     margin-bottom: 40px;
     margin-right: 40px;
     background-color: #6c7a89;
-    /* border: 5px solid yellow; */
     border-radius: 100px;
-    /* width: 75%; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row-reverse;
@@ -657,25 +649,6 @@ ti fwtografia apo header kai tin morfopoihsei */
 }
 
 @media screen and (max-width: 480px){
-    /* .menu nav li a{
-        font-size: 15px;
-    } */
-
-    /* #contact_footer{
-        font-size: 25px;
-    } */
-
-    /* .footer ul li a{
-        font-size: 15px;
-    } */
-    /* .body
-    {
-        overflow-x: hidden;
-        width: 100%;
-    } */
-    /* .menu {
-        width: 80%;
-    } */
     .about-us-wrapper {
         display: flex;
         flex-direction: column;
@@ -714,10 +687,6 @@ ti fwtografia apo header kai tin morfopoihsei */
     }
 
     .name-photo{
-        /* width: 80%; */
-        /* margin: 0 auto; */
-        /* margin-bottom: 2px; */
-        /* align-items: center; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -732,22 +701,11 @@ ti fwtografia apo header kai tin morfopoihsei */
     }
 
     .rounded-img{
-        /* margin: auto;
-        margin-left: 50px;
-        margin-top: 15px; */
         width: 100%;
         display: block;
         margin: 10px auto;
         padding: 0;
     }
-
-    /* .person-antonis{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        width: 80%;
-        margin-left: 0px;
-    } */
 }
 
 /* tablet */
@@ -771,7 +729,6 @@ ti fwtografia apo header kai tin morfopoihsei */
         padding: 30px;
         width: 90%;
         font-size: 20px;
-        /* text-align: ; */
     }
 
     .person-george, .person-antonis{
@@ -792,12 +749,7 @@ ti fwtografia apo header kai tin morfopoihsei */
     }
 
     .name-photo{
-        /* width: 80%; */
-        /* margin: 0 auto; */
-        /* margin-bottom: 2px; */
-        /* align-items: center; */
         display: flex;
-        /* flex-direction:column-reverse; */
         align-items: center;
     }
 
@@ -810,9 +762,6 @@ ti fwtografia apo header kai tin morfopoihsei */
     }
 
     .rounded-img{
-        /* margin: auto;
-        margin-left: 50px;
-        margin-top: 15px; */
         width: 60%;
         display: block;
         margin: 30px auto;
@@ -841,7 +790,6 @@ ti fwtografia apo header kai tin morfopoihsei */
 
 .all-topics {
     display: grid;
-    /* max-width: 1260px; */
     grid-template-rows: 160px 1fr;
     grid-template-columns: repeat(3fr);
     margin: 0 auto;
@@ -854,14 +802,12 @@ ti fwtografia apo header kai tin morfopoihsei */
     width: 80%;
     margin: 0 auto;
     margin-bottom: 50px;
-    /* grid-template-columns: repeat(auto-fit,minmax(350px,1fr)); autofit gia na ta prosarmozei oso zoom in kai out kanoume */
 }
 
 .topic-container {
     flex: 1;
     display: inline-block;
     box-sizing: border-box;
-    /* width: 33.33%; */
     padding: 0px 20px;
     margin-bottom: 40px;
     vertical-align: top;
@@ -924,8 +870,6 @@ ftiaksame gia ta topics*/
 
 .all-subject {
     display: block;
-    /* max-width: 1260px;
-    margin: 0 auto; */
 }
 
 .courses {
@@ -1020,7 +964,7 @@ ftiaksame gia ta topics*/
     align-items: center;
 }
 
-form {
+.form {
     background-color: #6c7a89;
     margin: 40px auto;
     border-radius: 50px;
@@ -1065,6 +1009,53 @@ form {
 .btn {
     margin-top: 20px;
 }
-
-
 /* __CONTACT__ */
+
+
+/*--------Sign U---------------------- */
+.signup_form{
+    border: 1px solid black;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.pers_info{
+    border: 1px solid green;
+    background-color: green;
+    margin-bottom: 40px;
+}
+
+.acc_info{
+    margin-bottom: 40px;
+    border: 1px solid red;
+    background-color: red;
+}
+
+.card_info{
+    border: 1px solid blue;
+    background-color: blue;
+}
+
+.input_signup{
+    background-color: #dfe1f1;
+    border-radius: 12px;
+    height: 50px;
+    width: 50%;
+}
+
+#country{
+    text-align: center;
+}
+
+details{
+    text-align: center;
+    background-color: #afb4d8;
+    margin-bottom: 5px;
+    border-radius: 12px;
+    width: 50%;
+    padding: 10px;
+}
+
+input:invalid{
+    border: 2px solid red;
+}
+/*-------------------------------------------*/

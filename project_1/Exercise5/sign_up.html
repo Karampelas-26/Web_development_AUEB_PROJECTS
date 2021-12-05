@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Next Graduate - Sign Up</title>
-        <!--meta gia na emfanizetai swsta se diaforetikes othones syskeywn-->
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style/style.css" />
 
-        <body>
-            <div class="content-wrapper">
-                <header class="menu">
-                    <!--homepage-->
-                    <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
-                    <!--menu-->
-                    <nav>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="topics.html">Topics</a></li>
-                            <li><a href="about_us.html">About us</a></li>
-                            <li><a href="contact.html">Contact us</a></li>
-                            <li><a href="Sign Up">Sign Up</a></li>
-                        </ul>
-                    </nav>
-                </header>
+<head>
+    <title>Next Graduate - Sign Up</title>
+    <!--meta gia na emfanizetai swsta se diaforetikes othones syskeywn-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
 
-                <main>
+<body>
+    <div class="content-wrapper">
+        <header class="menu">
+            <!--homepage-->
+            <a href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
+            <!--menu-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="topics.html">Topics</a></li>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="sign_up.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
 
-                    <fieldset class="signup_form">
-                        <div class="pers_info">
-                            <h1 id="title">Personal Info</h1>
-                            <div class="input_row">
-                                <label for="txt_last_name" class="label">Last name:</label><br>
-                                <input type="text" id="txt_last_name" name="lastname" minlength="3" maxlength="15" autocomplete="name"
-                                required placeholder="Your last name" class="input_signup" autofocus>
-                            </div>
+        <main>
 
-                            <div class="input_row">
-                                <label for="txt_name" class="label">Name:</label><br>
-                                <input type="text" id="txt_name" name="name" minlength="3" maxlength="15" autocomplete="name"
-                                required placeholder="Your name" class="input_signup" ></div>
-                            
-                            <div class="input_row">
-                                <label for="txt_address" class="label">Address:</label><br>
-                                <input type="text" id="txt_address" name="address" minlength="3" autocomplete="street-address"
-                                required placeholder="Your address" class="input_signup"></div>
+            <div class="singup-form">
+                <!-- Personal Info -->
+                <div>
+                    <fieldset class="personal-info">
+                        <!-- <div class="pers_info"> -->
+                        <legend>Personal Info</legend>
+                        <div class="element">
+                            <label for="txt_last_name">Last name:</label><br>
+                            <input type="text" id="txt_last_name" name="lastname" minlength="3" maxlength="15"
+                                autocomplete="name" required placeholder="Your last name" autofocus>
+                        </div>
 
-                            <div class="input_row">
-                                <label for="txt_email" class="label">Email:</label><br>
-                                <input type="email" id="txt_email" name="email" autocomplete="email" placeholder="e.g. example@mail.com"
-                                    required class="input_signup"></div>
-                            
-                        
-                            <div class="input_row">
-                                <label for="txt_birthday" class="label">Date of Birth:</label><br>
-                                <input type="date" id="txt_email" name="email" autocomplete="email" placeholder="e.g. xx/xx/xxxx"
-                                    required class="input_signup"></div>
+                        <div class="element">
+                            <label for="txt_name">Name:</label><br>
+                            <input type="text" id="txt_name" name="name" minlength="3" maxlength="15"
+                                autocomplete="name" required placeholder="Your name">
+                        </div>
 
-                            <label for="country" class="label">Country:</label>
+                        <div class="element">
+                            <label for="txt_address">Address:</label><br>
+                            <input type="text" id="txt_address" name="address" minlength="3"
+                                autocomplete="street-address" required placeholder="Your address">
+                        </div>
+
+                        <div class="element">
+                            <label for="txt_email">Email:</label><br>
+                            <input type="email" id="txt_email" name="email" autocomplete="email"
+                                placeholder="e.g. example@mail.com" required>
+                        </div>
+
+
+                        <div class="element">
+                            <label for="txt_birthday">Date of Birth:</label><br>
+                            <input type="date" id="txt_birthday" name="birthday" autocomplete="bday" required>
+                        </div>
+
+                        <div class="element">
+                            <label for="txt_telephone">Phone Number:</label>
+                            <input type="text" id="txt_telephone" name="telephone" placeholder="e.g. 6912345678"
+                                pattern="[0-9]{10}" autocomplete="tel" required>
+                        </div>
+
+                        <div id="country-selector" class="element">
+                            <label for="country">Country:</label>
                             <!-- lista me xwres-->
                             <select id="country" name="country">
                                 <option value="Afganistan">Afghanistan</option>
@@ -306,141 +321,184 @@
                                 <option value="Zambia">Zambia</option>
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
-
-                            <div class="input_row">
-                            <label for="txt_telephone" class="label">Phone Number:</label>
-                            <input type="text" id="txt_telephone" name="telephone" placeholder="e.g. 69xxxxxxxx" pattern="[0-9]{10}"
-                                autocomplete="tel" required class="input_signup"></div>
                         </div>
-                        <div class="acc_info">
-                            <h1 id="title">New Account Credentials</h1>
-                            <div class="input_row">
-                                <label for="txt_username" class="label">Username:</label>
-                                <input type="text" id="txt_username" name="username" mminlength=5 maxlength="12" placeholder="Set your username. Has to be between 5 and 12 characters."
-                                autocomplete="username" required class="input"></div>
-                            
-                            <div class="input_row">
-                                <label for="txt_password" class="label">Password:</label>
-                                <input type="password" id="txt_password" name="password" placeholder="Set your password."
-                                required class="input"></div>
 
-                            <div class="input_row">
-                                <label for="txt_confPas" class="label">Confirm Password:</label>
-                                <input type="password" id="txt_password" name="password" placeholder="Re-enter the password."
-                                required class="input"></div>
+                        <!-- </div> -->
+                    </fieldset>
+                </div>
+                <!-- New account Credentials -->
+                <div>
+                    <fieldset class="new-account-credentials">
+                        <!-- <div class="new-account-credentials"> -->
+                        <legend>New Account Credentials</legend>
+                        <div class="element">
+                            <label for="txt_username">Username:</label>
+                            <input type="text" id="txt_username" name="username" mminlength=5 maxlength="12"
+                                placeholder="Set your username. Has to be between 5 and 12 characters."
+                                autocomplete="username" required>
                         </div>
-                        <div class="card_info">
-                            <h1 id="title">Card Info</h1>
-                            <div class="input_row">
-                                <label for="txt_card-numb" class="label">Card Number:</label>
-                                <input type="text" id="txt_card-numb" name="card-numb" placeholder="Credit card Number"
-                                    autocomplete="cc-number" required class="input"></div>
 
-                            <div class="input_row">
-                                <label for="txt_card-name" class="label">Card Name:</label>
-                                <input type="text" id="txt_card-name" name="card-name" placeholder="Complete the name as written in the credit card"
-                                    autocomplete="cc-name" required class="input"></div>
-
-                            <div class="input_row">
-                                <label for="txt_card-exp" class="label">Expiration Date:</label>
-                                <input type="text" id="txt_card-exp" name="card-exp" placeholder="e.g. xx/xx"
-                                    autocomplete="cc-exp" required class="input"></div>
-
-                            <div class="input_row">
-                                <label for="txt_card-security" class="label">Security Code:</label>
-                                <input type="text" id="txt_telephone" name="telephone"  placeholder="e.g. xxx" pattern="{3}"
-                                    autocomplete="cc-csc" required class="input"></div>
+                        <div class="element">
+                            <label for="txt_password">Password:</label>
+                            <input type="password" id="txt_password" name="password" placeholder="Set your password."
+                                required>
                         </div>
+
+                        <div class="element">
+                            <label for="txt_confPas">Confirm Password:</label>
+                            <input type="password" id="txt_confPas" name="confirm-password"
+                                placeholder="Re-enter the password." required>
+                        </div>
+                        <!-- </div> -->
+                    </fieldset>
+                </div>
+
+                <!-- Card Info -->
+                <div>
+                    <fieldset class="card-info">
+                        <!-- <div class=""> -->
+                        <legend>Card Info</legend>
+                        <div class="element card-id">
+                            <label for="txt_card-numb">Card Number:</label>
+                            <input type="text" id="txt_card-numb" name="card-numb" placeholder="Credit card Number"
+                                autocomplete="cc-number" required>
+                        </div>
+
+                        <div class="element card-name">
+                            <label for="txt_card-name">Card Name:</label>
+                            <input type="text" id="txt_card-name" name="card-name"
+                                placeholder="Complete the name as written in the credit card" autocomplete="cc-name"
+                                required>
+                        </div>
+
+                        <div class="element card-exp">
+                            <label for="txt_card-exp">Expiration Date:</label>
+                            <input type="text" id="txt_card-exp" name="card-exp" placeholder="e.g. xx/xx"
+                                autocomplete="cc-exp" required>
+                        </div>
+
+                        <div class="element card-cvv">
+                            <label for="txt_card-security">CVV:</label>
+                            <input type="text" id="txt_telephone" name="telephone" placeholder="e.g. 000"
+                                pattern="[0-9]{3}" autocomplete="cc-csc" required>
+                        </div>
+                        <div class="null"></div>
+                        <!-- </div> -->
+                    </fieldset>
+                </div>
+
+                <!-- Questionnaire -->
+                <div>
+                    <fieldset class="questionnaire">
+                        <legend>Questionnaire</legend>
                         <details>
                             <summary>1. What is your educational background? </summary>
-                            <textarea name="question1" id="q1" cols="30" rows="10" class="txt_input" required placeholder="Enter your answer here... "></textarea>
+                            <textarea name="question1" id="q1" cols="100" rows="1" class="answer" required
+                                placeholder="Enter your answer here... "></textarea>
                         </details>
 
                         <details>
                             <summary>2. What year did you graduate?</summary>
-                            <textarea name="question2" id="q2" cols="30" rows="10" class="txt_input" required placeholder="Enter your answer here... "></textarea>
+                            <textarea name="question2" id="q2" cols="100" rows="1" class="answer" required
+                                placeholder="Enter your answer here... "></textarea>
                         </details>
 
                         <details>
                             <summary>3. What is your specialization?</summary>
-                            <textarea name="question3" id="q3" cols="30" rows="10" class="txt_input" required placeholder="Enter your answer here... "></textarea>
+                            <textarea name="question3" id="q3" cols="100" rows="1" class="answer" required
+                                placeholder="Enter your answer here... "></textarea>
                         </details>
-
                         <details>
                             <summary>4. What courses are you currently taking?</summary>
-                            <textarea name="question4" id="q4" cols="30" rows="10" class="txt_input" required placeholder="Enter your answer here... "></textarea>
+                            <textarea name="question4" id="q4" cols="100" rows="1" class="answer" required
+                                placeholder="Enter your answer here... "></textarea>
                         </details>
 
                         <details>
-                            <summary>5. What academic achievements do you hope to accomplish by the time you graduate?</summary>
-                            <textarea name="question5" id="q5" cols="30" rows="10" class="txt_input" required placeholder="Enter your answer here... "></textarea>
+                            <summary>5. What academic achievements do you hope to accomplish by the time you graduate?
+                            </summary>
+                            <textarea name="question5" id="q5" cols="100" rows="1" class="answer" required
+                                placeholder="Enter your answer here... "></textarea>
                         </details>
 
                         <details>
                             <summary>6. What types of projects have you completed during your education?</summary>
-                            <textarea name="question6" id="q6" cols="30" rows="10" class="txt_input" required placeholder="Enter your answer here... "></textarea>
+                            <textarea name="question6" id="q6" cols="100" rows="1" class="answer" required
+                                placeholder="Enter your answer here... "></textarea>
                         </details>
 
                         <details>
                             <summary>7. What aspects of your studies do you enjoy most?</summary>
-                            <textarea name="question7" id="q7" cols="30" rows="10" class="txt_input" required placeholder="Enter your answer here... "></textarea>
+                            <textarea name="question7" id="q7" cols="100" rows="1" class="answer" required
+                                placeholder="Enter your answer here... "></textarea>
                         </details>
 
                         <details>
-                            <summary>8.  Are you currently taking, or do you plan to take, any courses?</summary>
-                            <textarea name="question8" id="q8" cols="30" rows="10" class="txt_input" required placeholder="Enter your answer here... "></textarea>
+                            <summary>8. Are you currently taking, or do you plan to take, any courses?</summary>
+                            <textarea name="question8" id="q8" cols="100" rows="1" class="answer" required
+                                placeholder="Enter your answer here... "></textarea>
                         </details>
 
                         <details>
-                            <summary> 9. What are your educational goals for the future?</summary>
-                            <textarea name="question9" id="q9" cols="30" rows="10" class="txt_input" required placeholder="Enter your answer here... "></textarea>
+                            <summary>9. What are your educational goals for the future?</summary>
+                            <textarea name="question9" id="q9" cols="100" rows="1" class="answer" required
+                                placeholder="Enter your answer here... "></textarea>
                         </details>
 
                         <details>
                             <summary>10. What curriculum materials have you developed?</summary>
-                            <textarea name="question10" id="q10" cols="30" rows="10" class="txt_input" required placeholder="Enter your answer here... "></textarea>
+                            <textarea name="question10" id="q10" cols="100" rows="1" class="answer" required
+                                placeholder="Enter your answer here... "></textarea>
                         </details>
-                        
-                        <input type="submit" value="Submit" class="input_row btn">
                     </fieldset>
-
-                </main>
-
-                <!--to footer tis istoselidas mas-->
-            <footer class="footer">
-                <!--stoixeia epikoinwnias-antonis-->
-                <h1 id="contact_footer">Contact</h1>
-                <div class="leftAddress footer-grid-contacts">
-                    <address>
-                        <ul>
-                            <li>
-                                <h1>Antonios Christoulakis</h1>
-                            </li>
-                            <li><a href="mailto:p3180207@aueb.gr">Email: p3180207@aueb.gr</a></li>
-                            <li><a href="tel:+30698723987">Telephone: 698723987</a></li>
-                            <li><a href="https://github.com/xristoulakhs">Github</a></li>
-                            <li><a href="https://www.linkedin.com/in/antonis-xristoulakis-31493220b/">LinkedIn</a></li>
-                        </ul>
-                    </address>
                 </div>
-                <div class="rightAddress footer-grid-contacts">
-                    <!--stoixeia epikoinwnias-giorgos-->
-                    <address>
-                        <ul>
-                            <li>
-                                <h1>Georgios Karampelas</h1>
-                            </li>
-                            <li><a href="mailto:p3180072@aueb.gr">Email: p3180072@aueb.gr</a></li>
-                            <li><a href="tel:+306945227237">Telephone: 6945227237</a></li>
-                            <li><a href="https://github.com/Karampelas-26">Github</a></li>
-                            <li><a href="https://www.linkedin.com/in/giorgos-karampelas-28669a19b/">LinkedIn</a></li>
-                        </ul>
-                    </address>
-                </div>
-                <p class="copyright">© Copyright | Next Graduate</p>
-            </footer>
-        </div>
-        </body>
 
-    </head>
+
+
+                <div>
+                    <input type="submit" value="Submit" id="Submit" class="submit-btn">
+                </div>
+            </div>
+
+        </main>
+
+        <!--to footer tis istoselidas mas-->
+        <footer class="footer">
+            <!--stoixeia epikoinwnias-antonis-->
+            <h1 id="contact_footer">Contact</h1>
+            <div class="leftAddress footer-grid-contacts">
+                <address>
+                    <ul>
+                        <li>
+                            <h1>Antonios Christoulakis</h1>
+                        </li>
+                        <li><a href="mailto:p3180207@aueb.gr">Email: p3180207@aueb.gr</a></li>
+                        <li><a href="tel:+30698723987">Telephone: 698723987</a></li>
+                        <li><a href="https://github.com/xristoulakhs">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/antonis-xristoulakis-31493220b/">LinkedIn</a></li>
+                    </ul>
+                </address>
+            </div>
+            <div class="rightAddress footer-grid-contacts">
+                <!--stoixeia epikoinwnias-giorgos-->
+                <address>
+                    <ul>
+                        <li>
+                            <h1>Georgios Karampelas</h1>
+                        </li>
+                        <li><a href="mailto:p3180072@aueb.gr">Email: p3180072@aueb.gr</a></li>
+                        <li><a href="tel:+306945227237">Telephone: 6945227237</a></li>
+                        <li><a href="https://github.com/Karampelas-26">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/giorgos-karampelas-28669a19b/">LinkedIn</a></li>
+                    </ul>
+                </address>
+            </div>
+            <p class="copyright">© Copyright | Next Graduate</p>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="sign_up.js"></script>
+</body>
+
+
 </html>

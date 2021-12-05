@@ -1012,50 +1012,235 @@ ftiaksame gia ta topics*/
 /* __CONTACT__ */
 
 
-/*--------Sign U---------------------- */
-.signup_form{
-    border: 1px solid black;
-    margin-bottom: 40px;
-    text-align: center;
-}
-.pers_info{
-    border: 1px solid green;
-    background-color: green;
-    margin-bottom: 40px;
+/*--------Sign Up---------------------- */
+
+.singup-form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 1.7em;
 }
 
-.acc_info{
-    margin-bottom: 40px;
-    border: 1px solid red;
-    background-color: red;
+.singup-form div {
+    margin: 20px 0px;
+    width: 90%;
 }
 
-.card_info{
-    border: 1px solid blue;
-    background-color: blue;
+.singup-form fieldset > legend{
+    margin: 0 auto;
+    padding: 0px 20px;
+
+    font-size: 2em;
+    font-weight: bold;
 }
 
-.input_signup{
+.personal-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+#country-selector {
+    grid-column: 2/3;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+}
+
+.element label {
+    margin: 10px 0px;
+}
+
+.element input {
+    border-radius: 10px;
     background-color: #dfe1f1;
-    border-radius: 12px;
-    height: 50px;
-    width: 50%;
+    min-height: 30px;
 }
 
-#country{
-    text-align: center;
+.element input:invalid{
+    border: 2px solid red;
+}
+.card-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    " name name name date"
+    "id id id cvv";
+    
+}
+
+.card-id{
+    grid-area: id;
+}
+.card-name {
+    grid-area: name;
+}
+
+.null {
+    grid-area: null;
+}
+
+.card-exp {
+    grid-area: date;
+}
+
+.card-exp input {
+    width: 60%;
+}
+
+.card-cvv {
+    grid-area: cvv;
+}
+
+.card-cvv input {
+    width: 60%;
+}
+.questionnaire {
+    display: flex;
+    flex-direction: column;
+}     
+
+.questionnaire > * {
+    cursor: pointer;
 }
 
 details{
-    text-align: center;
-    background-color: #afb4d8;
-    margin-bottom: 5px;
-    border-radius: 12px;
-    width: 50%;
-    padding: 10px;
+    margin-top: 10px;
 }
 
-input:invalid{
-    border: 2px solid red;
+.questionnaire textarea {
+    width: 70%;
 }
-/*-------------------------------------------*/
+
+.submit-btn {
+    display: block;
+    margin: 0 auto;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.new-account-credentials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.new-account-credentials .element {
+    align-items: flex-start;
+}
+
+.new-account-credentials .element > input {
+    width: 80%;
+}
+
+fieldset {
+    border: 3px solid #121212;
+    background-color: #817c7c;
+    border-radius: 50px;
+    padding: 15px 30px;
+}
+
+.answer{
+    background-color: #dfe1f1;
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 480px) {
+
+    .singup-form {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1em;
+    }
+
+    .singup-form fieldset > legend {
+        padding: 0 5px;
+    }
+    .personal-info {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0px;
+    }
+
+    .new-account-credentials {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .element label {
+        margin: 5px 0;
+    }
+    
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    
+    .singup-form {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1em;
+    }
+
+    .personal-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    #country-selector {
+        grid-column: 1/3;
+        width: 50%;
+        margin:0 auto;
+    }
+
+    .new-account-credentials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new-account-credentials .element label{
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .new-account-credentials .element input{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .card-info {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        " name name name name"
+        "id id id id"
+        "date date cvv cvv";
+    }
+
+    .card-exp input {
+        width: 85%;
+    }
+
+    .card-cvv input {
+        width: 85%;
+    }
+
+    
+    
+}

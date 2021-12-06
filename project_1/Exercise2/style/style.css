@@ -193,16 +193,20 @@ otan kanoyme hover ginetai 100%*/
     padding-top: 10px;
 }
 
+/* p:nth-child(1) gia na epileksoume to prwto tag "p"*/
 .course-in-offer p:nth-child(1){
     padding-top: 10px;
     width: 80%;
     display: block;
     margin: 0 auto;
 }
-
+/* p:last-child gia na epileksoume to teleutaio tag "p"*/
 .course-in-offer p:last-child {
     padding-bottom: 10px;
 }
+
+/* morfopoioume ta tag del kai ins
+opou fainete i prosfora gia ta courses*/
 
 del {
     color: rgb(238, 93, 93);
@@ -216,7 +220,11 @@ ins {
 }
 
 /* our vision rules */
-/* bazoume display block gia na einai to ena katw apo to allo */
+/* bazoume display block gia na einai to ena katw apo to allo,
+bazoume float left gia to sugkekrimeno block na einai deksia 
+kai parakatw na baloume to aside deksia(float:right)
+mesa sto article-container exoume left-cont pou einai to keimeno kai 
+right-cont pou einai h fwtografia me to <a> poy odhgei sto contact us*/
 
 .article-container {
     float: left;
@@ -258,7 +266,23 @@ ins {
     padding: 10px;
     text-align: center;
 }
-
+/* se auth thn askhsh gia na emfanizontai wraia ta blogs
+ta bazoyme se ena container(blog-container) kai bazoyme se kathe blog width
+to ena trito ths othonis diladi width:33.33% gia na doulepsei auto
+prepei sthn html aname apo kathe div stoixo twn blogs na yparxei sxolio
+px
+...
+..
+</div><!--
+--><div>
+...
+...
+</div> 
+yparxoyn sxetika sxolia kai sotn kwdika toy html
+PROSOXI: an xrhsimopoihsete extension gia morfopoihsh toy kwdika den tha emfanizontai
+swsta ta stoixeia tha emfanizontai mono dyo ana seira. Opote tha prepei na yparxoyn ta 
+sxolia ta kena sxolia ston kwdika toy ekastote html arxeiou. Mporeite na epikoinwneisete 
+mazi mas gia kathe aporia kai dieykrinisi*/
 .blog-container {
     display: block;
     margin:0px auto;
@@ -277,6 +301,8 @@ ins {
 .single-blog {
     display: inline-block;
     box-sizing: border-box;
+    /* to width einai 33.33% gia ton parapanw logo pou anaferthike
+    an htan ligotero apo 33.33% de tha stoixizontan swsta sth mesh*/
     width: 33.33%;
     padding: 0px 30px;
     vertical-align: top;
@@ -296,6 +322,9 @@ ins {
     box-shadow: 0 16px 30px rgba(0,0,0,.16);
 }
 
+/* kanontas to img stoixeio apo default span se block
+mporoyme na to stoixisoume eukola sth mesh apla me 
+margin: 0 auto; */
 .blog img {
     width: 80%;
     display: block;
@@ -312,7 +341,6 @@ ins {
     padding: 15px 10px 0px 10px;
 }
 
-/*na allaksoume to onoma se copyright */
 .copyright {
     text-align: center;
     font-size: 15px;
@@ -475,6 +503,8 @@ ti fwtografia apo header kai tin morfopoihsei */
     margin-bottom: 50px;  
 }
 
+/* h stoixish twn topics ginetai me ton idio tropo
+pou anaferthike gia thn stoixisi twn blogs sthn homepage */
 .topic-container {
     display: inline-block;
     box-sizing: border-box;
@@ -539,6 +569,9 @@ ftiaksame gia ta topics*/
     margin: 0 auto;
 }
 
+
+/* h stoixish twn courses ginetai me ton idio tropo
+pou anaferthike gia thn stoixisi twn blogs sthn homepage */
 .courses {
     display: inline-block;
     width: 33.33%;

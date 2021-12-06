@@ -1,8 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap'); */
-
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow&family=Rubik&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow&family=Rubik&display=swap'); /*import gia ti grammatoseira*/
+/*------------------INDEX------------------------------*/
 /*font apo to fonts.google.com*/
 body {
     font-family: 'Rubik', sans-serif;
@@ -219,6 +216,7 @@ ins {
 }
 
 /* our vision rules */
+/* bazoume display block gia na einai to ena katw apo to allo */
 
 .article-container {
     float: left;
@@ -325,7 +323,9 @@ ins {
     clear: both;
 }
 
-/*__ABOUT-US__*/
+/*----------------TELOS INDEX--------------------------*/
+
+/*----------------ABOUT-US---------------------------*/
 
 /* allazoume to font wste na fainetai
 kai kala pws einai xeirografh */
@@ -439,16 +439,15 @@ ti fwtografia apo header kai tin morfopoihsei */
     margin-bottom: 40px;
     margin-right: 40px;
     background-color: #6c7a89;
-    /* border: 5px solid yellow; */
     border-radius: 100px;
     width: 75%;
     float: right;
     clear: both;
 }
 
-/*__ABOUT-US__*/
+/*--------------- TELOS ABOUT-US---------------------------*/
 
-/*__TOPICS__*/
+/*--------------------TOPICS-------------------------------*/
 
 #topic-text {
     text-align: center;
@@ -511,14 +510,14 @@ ti fwtografia apo header kai tin morfopoihsei */
 }
 
 .topic {
-    border: 0x solid black;
+    border: 0px solid black;
     border-radius: 35px;
     background-color: #fff;
     padding: 10px;
     margin: 0px; 
     display: block;
     transition: .3s box-shadow;
-    box-shadow: 10 4px 16px rgba(75, 59, 59, 0.0);
+    box-shadow: 10px 4px 16px rgba(75, 59, 59, 0.0);
 }
 .topic:hover {
     box-shadow: 0 16px 30px rgba(0,0,0,.16);
@@ -526,10 +525,10 @@ ti fwtografia apo header kai tin morfopoihsei */
 .topic .topic-img {
     width: 100%;
 }
-/*__TOPICS__*/
+/*----------------------- TELOS TOPICS----------------------------*/
 
 
-/* __SUBJECTS__ */
+/*------------------------SUBJECTS---------------------------------*/
 
 /* san class container xrisimopoioume thn idia pou 
 ftiaksame gia ta topics*/
@@ -560,7 +559,7 @@ ftiaksame gia ta topics*/
 }
 
 .course {
-    border: 0x solid black;
+    border: 0px solid black;
     border-radius: 35px;
     background-color: #fff;
     padding: 10px;
@@ -602,9 +601,9 @@ ftiaksame gia ta topics*/
 .course a:visited {
     color:black
 }
-/* __SUBJECTS__ */
+/*-----------------------TELOS SUBJECTS---------------------------*/
 
-/* __CONTACT__ */
+/*-----------------------CONTACT----------------------- */
 
 form{
     background-color: #6c7a89;
@@ -655,4 +654,4 @@ form{
 }
 
 
-/* __CONTACT__ */
+/* ----------------------- TELOS CONTACT----------------------- */

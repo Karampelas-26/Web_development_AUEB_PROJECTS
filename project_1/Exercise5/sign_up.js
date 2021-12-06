@@ -1,30 +1,16 @@
  //elegxos password
-//  var btn= document.getElementById("Submit");
-//  btn.addEventListener("click", Onclick);
-//  function Onclick(){
-//      let password=document.getElementById("txt_password").value; //.value gia na paroume tis times twn input
-//      let confirm_pas=document.getElementById("txt_confPas").value;
+    let btn= document.getElementById("Submit");
+    let password=document.getElementById("txt_password"); //.value gia na paroume tis times twn input
+    let confirm_pas=document.getElementById("txt_confPas");
+    btn.addEventListener("click",function Onclick(){
+        if(password.value!=confirm_pas.value){
+            alert('Passwords dont match!')
+            password.style.border= "3px solid red"
+            confirm_pas.style.border= "3px solid red"
+        }
+    } );
     
-//      if(password!=confirm_pas){
-//          console.log('Passwords dont match!')
-//      }
-//      else{
-//          console.log('Password match!')
-//      }
-//  }
-let password=document.getElementById("txt_password"); //.value gia na paroume tis times twn input
-let confirm_pas=document.getElementById("txt_confPas");
 
-password.onchange( function checkPass() {
-    if(password.value!=confirm_pas.value){
-        confirm_pas.setCustomValidity('Passwords dont match!')
-        confirm_pas.reportValidity()
-    }
-    else{
-        confirm_pas.setCustomValidity('Password match!')
-    }
-}
-)
 
  //elegxos tilefwnou
  let phoneNumb=document.getElementById("txt_telephone");

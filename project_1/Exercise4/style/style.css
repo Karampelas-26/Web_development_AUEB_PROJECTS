@@ -1,19 +1,19 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow&family=Rubik&display=swap'); */
 
 @font-face {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik';
     src: url('fonts/Rubik/static/Rubik-Medium.ttf') format('truetype');
     src: url('fonts/Barlow/Barlow-Regular.ttf') format('truetype');
 
 }
 
 @font-face {
-    font-family: 'Architects Daughter', sans-serif;
+    font-family: 'Architects Daughter';
     src: url('fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow';
     src: url('fonts/Barlow/Barlow-Regular.ttf') format('truetype');
 }
 
@@ -272,7 +272,6 @@ container brisketai pio katw sto idio arxeio css*/
 .top-entity-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-row: 1fr;
 }
 
 /* css rules for aside */
@@ -843,7 +842,6 @@ ti fwtografia apo header kai tin morfopoihsei */
     display: grid;
     /* max-width: 1260px; */
     grid-template-rows: 160px 1fr;
-    grid-template-columns: repeat(3fr);
     margin: 0 auto;
 }
 
@@ -896,14 +894,14 @@ ti fwtografia apo header kai tin morfopoihsei */
 }
 
 .topic {
-    border: 0x solid black;
+    border: 0px solid black;
     border-radius: 35px;
     background-color: #fff;
     padding: 10px;
     margin: 0px;
     display: block;
     transition: .3s box-shadow;
-    box-shadow: 10 4px 16px rgba(75, 59, 59, 0.0);
+    box-shadow: 10px 4px 16px rgba(75, 59, 59, 0.0);
 }
 
 .topic:hover {
@@ -945,7 +943,7 @@ ftiaksame gia ta topics*/
 }
 
 .course {
-    border: 0x solid black;
+    border: 0px solid black;
     border-radius: 35px;
     background-color: #fff;
     padding: 10px;

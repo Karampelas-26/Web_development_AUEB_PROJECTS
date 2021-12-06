@@ -348,38 +348,45 @@ ins {
     min-width: 100px;
 }
 
-.article-container img {
-    width: 80%;
+.article-container article {
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "vision vision"
+    "pic pic"
+    "btn btn";
 }
 
-.left-cont {
-    float: left;
-    width: 50%;
-}
-
-.left-cont p {
-    font-size: 20px;
-    width: 80%;
-}
-
-.right-cont {
-    float: right;
-    width: 50%;
-}
-
-.right-cont img {
-    width: 80%;
-    height: 80%;
-}
-
-.right-cont a {
-    display: block;
-    width: 40%;
-    background-color: #fff;
-    border-radius: 25px;
-    margin: 0 auto;
-    padding: 10px;
+.article-container article h1 {
+    grid-area: title;
+    font-size: 3em;
     text-align: center;
+}
+
+.article-container article p {
+    grid-area: vision;
+    font-size: 2em;
+}
+
+.article-container article picture {
+    grid-area: pic;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.article-container article picture img {
+    width: 100%;
+    border-radius: 50px;
+}
+.article-container article a {
+    grid-area: btn;
+    background-color: #e4f1fe;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 2em;
 }
 
 .blog-container {

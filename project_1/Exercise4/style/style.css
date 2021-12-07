@@ -1,45 +1,49 @@
-
 /* @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow&family=Rubik&display=swap'); */
 
 @font-face {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik';
     src: url('fonts/Rubik/static/Rubik-Medium.ttf') format('truetype');
     src: url('fonts/Barlow/Barlow-Regular.ttf') format('truetype');
-    
+
 }
 
 @font-face {
-    font-family: 'Architects Daughter', sans-serif;
+    font-family: 'Architects Daughter';
     src: url('fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow';
     src: url('fonts/Barlow/Barlow-Regular.ttf') format('truetype');
 }
 
-.content-wrapper{
+.content-wrapper {
     display: grid;
     /* width: 100%; */
 }
+
 /*font apo to fonts.google.com*/
 body {
     font-family: 'Rubik', sans-serif;
-    margin: 0px;/*gia na min exei keno gyro gyro*/
+    margin: 0px;
+    /*gia na min exei keno gyro gyro*/
     background-color: #e4f1fe;
     overflow-x: hidden;
+    width: 100%;
 }
 
 /*class gia to menu*/
 .menu {
     background-color: #34495e;
-    display: flex; /*gia na emfanisei stin idia seira to logo kai ti lista*/
-    clear: both; /*clear: both gia na min exei elements na kanoyn float deksia kai aristera*/
+    display: flex;
+    /*gia na emfanisei stin idia seira to logo kai ti lista*/
+    clear: both;
+    /*clear: both gia na min exei elements na kanoyn float deksia kai aristera*/
     justify-content: space-between;
     align-items: center;
-    width: 100%; 
+    width: 100%;
     overflow: hidden;
-    position: relative;
+    position: fixed;
 }
 
 main {
@@ -68,7 +72,8 @@ bazontas ta li sti seira xwris bullets*/
 }
 
 .menu nav li {
-    display: inline-block;/*gia na emfanisoume ta li sti seira*/
+    display: inline-block;
+    /*gia na emfanisoume ta li sti seira*/
     margin: 0px;
 }
 
@@ -91,8 +96,6 @@ ta underline twn links gia na fainontai pio omorfa*/
     color: #009bff;
 }
 
-
-
 /* bazoume topo8etoume sto telos tis selidas to footer 
 bazontas aristera kai deksia to onoma/epwnumo kai ta 
 stoixeia epikoinwnias toy kathe melous ths omadas,
@@ -105,7 +108,7 @@ analoges morfopoihseis sta a kai h1*/
     left: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
     width: 100%;
 }
 
@@ -138,7 +141,7 @@ analoges morfopoihseis sta a kai h1*/
 }
 
 .footer ul li {
-    margin: 0px;
+    margin: 0;
 }
 
 .footer ul li a {
@@ -163,6 +166,103 @@ analoges morfopoihseis sta a kai h1*/
     margin: 15px;
     clear: both;
 }
+/* mobile */
+@media screen and (max-width: 480px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+    }
+
+    main {
+        margin-top: 10px;
+    }
+
+    .logo {
+        padding: 10px;
+    }
+
+    .menu nav ul {
+        padding: 10px;
+    }
+
+    .menu nav li {
+        display: block;
+        padding: 5px;
+    }
+
+    .menu nav li a:hover {
+        background: transparent;
+        color: #009bff;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* width: 100%; */
+
+    }
+
+    .footer h1 {
+        font-size: 15px;
+    }
+
+    #contact_footer{
+        font-size: 20px;
+    }
+
+    .leftAddress, .rightAddress {
+        text-align: center;
+    }
+    .copyright {
+        margin: 10px 0px;
+        padding: 0px;
+    }
+}
+ 
+/* tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    main {
+        margin-top: 0;
+    }
+
+    .menu {
+        display: flex;
+        position: relative;
+    }
+
+    /* no changes on logo class */
+
+    .menu nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    /* epilegoume odd kai even gia na ta xwrisoume se duo columns */
+    .menu nav ul li:nth-child(odd) {
+        grid-column: 1/2;
+    }
+
+    .menu nav ul li:nth-child(even) {
+        grid-column: 2/3;
+    }
+
+    .menu nav li {
+        display: block;
+        padding: 5px 0px;
+    }
+
+    .menu nav li a:hover {
+        background: transparent;
+        color: #009bff;
+    }
+
+    /* footer is ok */
+}
 
 /* HOMEPAGE main content */
 /* se olo to content xrhsimopoioume tin class 
@@ -171,8 +271,7 @@ container brisketai pio katw sto idio arxeio css*/
 /* aside and our vision */
 .top-entity-container {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-row: 1fr;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 /* css rules for aside */
@@ -217,7 +316,7 @@ otan kanoyme hover ginetai 100%*/
     padding-top: 10px;
 }
 
-.course-in-offer p:nth-child(1){
+.course-in-offer p:nth-child(1) {
     padding-top: 10px;
     width: 80%;
     display: block;
@@ -251,53 +350,65 @@ ins {
     min-width: 100px;
 }
 
-.article-container img{
-    width: 80%;
+.article-container article {
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "vision vision"
+    "pic pic"
+    "btn btn";
 }
 
-.left-cont {
-    float: left;
-    width: 50%;
-}
-
-.left-cont p {
-    font-size: 20px;
-    width: 80%;
-}
-
-.right-cont {
-    float: right;
-    width: 50%;
-}
-.right-cont img {
-    width: 80%;
-    height: 80%;
-}
-
-.right-cont a {
-    display: block;
-    width: 40%;
-    background-color: #fff;
-    border-radius: 25px;
-    margin: 0 auto;
-    padding: 10px;
+.article-container article h1 {
+    grid-area: title;
+    font-size: 3em;
     text-align: center;
 }
 
+.article-container article p {
+    grid-area: vision;
+    font-size: 2em;
+}
+
+.article-container article picture {
+    grid-area: pic;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.article-container article picture img {
+    width: 100%;
+    border-radius: 50px;
+}
+.article-container article a {
+    grid-area: btn;
+    background-color: #e4f1fe;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 2em;
+}
+
+
 .blog-container {
     display: block;
-    margin:0px auto;
-}
+    margin: 0px auto;
+    width: 100%;
+}   
+
 .blog-container>h1 {
-    text-align:center;
+    text-align: center;
     font-size: 45px;
     font-weight: 900;
     padding-top: 40px;
 }
+
 .all-blogs {
     display: grid;
     flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .single-blog {
@@ -309,6 +420,7 @@ ins {
     text-decoration: none;
     color: #000;
 }
+
 .blog {
     border-radius: 25px;
     background-color: #fff;
@@ -316,12 +428,14 @@ ins {
 }
 
 .blog:hover {
-    box-shadow: 0 16px 30px rgba(0,0,0,.16);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, .16);
 }
 
-.blog img {
-    width: 80%; 
-    margin:  auto;
+.blog picture img {
+    width: 80%;
+    /* text-align: center; */
+    display: block;
+    margin: auto;
 }
 
 .blog p {
@@ -334,19 +448,121 @@ ins {
     padding: 15px 10px 0px 10px;
 }
 
+@media screen and (max-width: 480px) {
+    
+    .top-entity-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offers {
+        width: 80%;
+        margin: 15px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .course-in-offer {
+        width: 80%;
+    }
+
+    .course-in-offer:hover {
+        width: 82%;
+    }
+
+    .article-container {
+        padding: 15px;
+        width: 80%;
+    }
+
+    .article-container article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-container article h1 {
+
+        padding: 10px;
+        margin:0px;
+    }
+
+    .article-container article p {
+        padding: 0px 10px;
+        margin: 0px;
+    }
+
+    .article-container article picture {
+        /* display: block; */
+        text-align: center;
+        margin: 20px auto;
+        
+    }
+
+    .article-container article a {
+        width: 40%;
+        background-color: #fff;
+        color: #000;
+        border-radius: 25px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    
+    .top-entity-container {
+        margin-top: 30px;
+    }
+    .article-container {
+        padding: 15px;
+        width: 80%;
+    }
+
+    .article-container article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-container article h1 {
+
+        padding: 10px;
+        margin:0px;
+    }
+
+    .article-container article p {
+        padding: 0px 10px;
+        margin: 0px;
+    }
+
+    .article-container article picture {
+        /* display: block; */
+        text-align: center;
+        margin: 20px auto;
+        
+    }
+
+    .article-container article a {
+        width: 40%;
+        background-color: #fff;
+        color: #000;
+        border-radius: 25px;
+        text-align: center;
+    }
+}
 /*__ABOUT-US__*/
 
 /* allazoume to font wste na fainetai
 kai kala pws einai xeirografh */
 .biography {
     font-family: 'Architects Daughter', cursive;
-
 }
 
 .about-us-wrapper {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 100px repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px repeat(4, 1fr);
 }
 
 /* morfopoioume ta h1 me ta onomata mas
@@ -376,6 +592,7 @@ kai oxi sto text kanontas mia grammi apo katw */
     padding: 10px;
     border-radius: 50px;
 }
+
 /* bazoume section img wste na min epileksei 
 ti fwtografia apo header kai tin morfopoihsei */
 .rounded-img {
@@ -383,8 +600,8 @@ ti fwtografia apo header kai tin morfopoihsei */
     height: auto;
     border-radius: 350px;
     margin-left: 100px;
-    
-}   
+
+}
 
 .person-george {
     padding: 40px;
@@ -445,95 +662,142 @@ ti fwtografia apo header kai tin morfopoihsei */
     grid-column: 2/5;
     grid-row: 4/6;
 }
-@media screen and (max-width: 600px){
-    body {
-        font-size: 1.2em;
-        background-color: orange;
-        /* width: 100%; */
-        /* max-width: 500px; */
-        width: 100%;
-    }
+
+@media screen and (max-width: 480px){
     
-    .menu {
+    .about-us-wrapper {
         display: flex;
         flex-direction: column;
-        position: relative;
-        /* justify-content: center; */
-        align-items: center ;
-    }
-
-    .menu nav {
-        float: none;
-    }
-
-    .menu nav li {
-        display: block;
-    }
-    .logo{
-        float: none;
-        padding: auto;    
-        width: 50%;
-        height: auto;
-    }
-    .about-us-wrapper{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
         align-items: center;
-        /* align-items: ; */
+    }
+    #text-box-about-us{
+        font-size: 25px;
+        width: 80%;
+        margin: 10px 0px;
+        padding: 0;
+
+    }
+
+    .info {
+        margin: 0px;
+        padding: 0px 15px;
+        width: 70%;
+        text-align: center;
     }
 
     .person-george, .person-antonis{
-        padding: 10px;
-        margin: 15px;
         display: flex;
         flex-direction: column;
-        align-items:flex-start;
-        padding: 10px;
-        /* width: 0%; */
-        /* max-width: 500px;     */
-    }
-    .person-antonis .info, .person-george .info {
-        border: none;
-        padding: 15px;
-    }
-    .info {
-        margin: 0px 20px;
+        align-items: center;
+        position: relative;
         width: 80%;
-        font-size: 1.2em;
+        padding: 15px;
+        margin: 0px 10px 20px 10px;
+        border-radius: 25px;
     }
 
-    .name-photo {
-        margin: 0px 20px;
+    .person-antonis .info, .person-george .info{
+        border-right: none;
+        border-left: none;
+        padding: 0;
     }
 
-    .rounded-img {
-        /* padding: 10px;
-        display: block;
-        margin: 0 auto; */
-        margin: 20px 0px 0px 0px;
+    .name-photo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    #text-box-about-us {
-        font-size: 1.5em;
-        /* text-align: center; */
-        background-color: #34495e;
-        color: #e4f1fe;
-        /* display: block; */
-        /* margin: auto; */
-        /* padding: 10px; */
-        border-radius: 50px;
+    #george-karampelas-name, #antonis-xhristoulakis-name{
+        font-size: 25px;
     }
     
-    .black-text-bottom-border {
-        font-size: 2em;
-        font-weight: 600;
-        text-align: left;
-        padding: 0;
-        margin: 0;
+    .black-text-bottom-border{ /*gia na paei to keimeno sti mesi*/
+        margin: auto;
     }
+
+    .rounded-img{
+        width: 100%;
+        display: block;
+        margin: 10px auto;
+        padding: 0;
+    }
+
+    
 }
+
+/* tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .about-us-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #text-box-about-us{
+        font-size: 30px;
+        width: 60%;
+        margin: 25px 0px;
+        padding: 0;
+
+    }
+
+    .info {
+        margin: 0px;
+        padding: 30px;
+        width: 90%;
+        font-size: 20px;
+        /* text-align: ; */
+    }
+
+    .person-george, .person-antonis{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 80%;
+        padding: 15px;
+        margin: 0px 10px 20px 10px;
+        border-radius: 100px;
+    }
+
+    .person-antonis .info, .person-george .info{
+        border-right: none;
+        border-left: none;
+        padding: 0;
+    }
+
+    .name-photo{
+        /* width: 80%; */
+        /* margin: 0 auto; */
+        /* margin-bottom: 2px; */
+        /* align-items: center; */
+        display: flex;
+        /* flex-direction:column-reverse; */
+        align-items: center;
+    }
+
+    #george-karampelas-name, #antonis-xhristoulakis-name{
+        font-size: 35px;
+    }
+    
+    .black-text-bottom-border{ /*gia na paei to keimeno sti mesi*/
+        margin: auto;
+    }
+
+    .rounded-img{
+        /* margin: auto;
+        margin-left: 50px;
+        margin-top: 15px; */
+        width: 60%;
+        display: block;
+        margin: 30px auto;
+        padding: 0;
+    }
+
+}
+
+
 /*__ABOUT-US__*/
 
 /*__TOPICS__*/
@@ -553,9 +817,7 @@ ti fwtografia apo header kai tin morfopoihsei */
 
 .all-topics {
     display: grid;
-    /* max-width: 1260px; */
     grid-template-rows: 160px 1fr;
-    grid-template-columns: repeat(3fr);
     margin: 0 auto;
 }
 
@@ -566,14 +828,12 @@ ti fwtografia apo header kai tin morfopoihsei */
     width: 80%;
     margin: 0 auto;
     margin-bottom: 50px;
-    /* grid-template-columns: repeat(auto-fit,minmax(350px,1fr)); autofit gia na ta prosarmozei oso zoom in kai out kanoume */
-}
+    }
 
 .topic-container {
     flex: 1;
     display: inline-block;
     box-sizing: border-box;
-    /* width: 33.33%; */
     padding: 0px 20px;
     margin-bottom: 40px;
     vertical-align: top;
@@ -585,7 +845,7 @@ ti fwtografia apo header kai tin morfopoihsei */
 }
 
 .topic-container a:visited {
-    color:black;
+    color: black;
 }
 
 /* einai to p me ton titlo tou topic */
@@ -602,26 +862,30 @@ ti fwtografia apo header kai tin morfopoihsei */
     font-weight: 600;
     text-decoration: underline;
 }
+
 .topic-container ul {
     list-style-type: none;
 }
 
 .topic {
-    border: 0x solid black;
+    border: 0px solid black;
     border-radius: 35px;
     background-color: #fff;
     padding: 10px;
-    margin: 0px; 
+    margin: 0px;
     display: block;
     transition: .3s box-shadow;
-    box-shadow: 10 4px 16px rgba(75, 59, 59, 0.0);
+    box-shadow: 10px 4px 16px rgba(75, 59, 59, 0.0);
 }
+
 .topic:hover {
-    box-shadow: 0 16px 30px rgba(0,0,0,.16);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, .16);
 }
+
 .topic .topic-img {
     width: 100%;
 }
+
 /*__TOPICS__*/
 
 
@@ -653,7 +917,7 @@ ftiaksame gia ta topics*/
 }
 
 .course {
-    border: 0x solid black;
+    border: 0px solid black;
     border-radius: 35px;
     background-color: #fff;
     padding: 10px;
@@ -662,8 +926,9 @@ ftiaksame gia ta topics*/
     transition: .3s box-shadow;
     box-shadow: 0 4px 16px rgba(75, 59, 59, 0.0);
 }
+
 .course:hover {
-    box-shadow: 0 16px 30px rgba(0,0,0,.16);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, .16);
 }
 
 .course img {
@@ -671,7 +936,6 @@ ftiaksame gia ta topics*/
     display: block;
     margin: 0 auto;
     padding: 20px
-
 }
 
 .course p {
@@ -689,29 +953,52 @@ ftiaksame gia ta topics*/
 
 /* opoiodhpote apogono tou course */
 .course a {
-    color:black;
+    color: black;
 }
 
 .course a:visited {
-    color:black
+    color: black
 }
+
 /* __SUBJECTS__ */
 
 /* __CONTACT__ */
 
-.grid_wrapper{
+@media screen and (max-width: 480px){
+    .menu nav li a{
+        font-size: 15px;
+    }
+
+    #contact_footer{
+        font-size: 25px;
+    }
+
+    .footer ul li a{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+.grid_wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
 }
 
-form{
+form {
     background-color: #6c7a89;
     margin: 40px auto;
     border-radius: 50px;
 }
 
-.input{
+.input {
     background-color: #dfe1f1;
     border-radius: 12px;
     height: 50px;
@@ -720,7 +1007,7 @@ form{
     padding: 10px;
 }
 
-.txt_input{
+.txt_input {
     background-color: #dfe1f1;
     width: 80%;
     display: block;
@@ -729,26 +1016,27 @@ form{
     border-radius: 12px;
 }
 
-#contact_title{
+#contact_title {
     text-align: center;
     text-decoration: underline;
 }
 
-.label{
+.label {
     display: inline-block;
     justify-content: center;
     align-items: center;
 }
 
-.input_row{
+.input_row {
     display: block;
     margin: 0 auto;
     padding: 10px;
     text-align: center;
 }
 
-.btn{
+.btn {
     margin-top: 20px;
 }
+
 
 /* __CONTACT__ */

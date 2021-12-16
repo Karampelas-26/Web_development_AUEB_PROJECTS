@@ -1,4 +1,4 @@
- //elegxos password
+r     //elegxos password
     let btn= document.getElementById("Submit");
     let password=document.getElementById("txt_password"); //.value gia na paroume tis times twn input
     let confirm_pas=document.getElementById("txt_confPas");

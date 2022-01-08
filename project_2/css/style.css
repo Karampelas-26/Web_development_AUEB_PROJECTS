@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow&family=Noto+Sans&family=Rubik&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #121212;
+    /* background-color:   green; */
+}
+
+form { 
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 60%;
+    font-size: 3em;
+    font-weight: 800;
+    color: white;
+}
+
+form > label {
+    margin: 15px auto;
+}
+
+#search-bar {
+    width: 60%;
+    margin: 15px auto;
+    /* line-height: 28px; */
+    font-size: 0.5em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#submit-btn {
+    width: 20%;
+    margin: 15px auto;
+    border-radius: 10px;
+    font-size: 0.5em;
+}
+
+.courses-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#results-from-search {
+    display: block;
+    margin: 10px auto;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    /* background-color: gray; */
+    padding: 15px;
+    border-radius: 20px;
+    
+}
+
+#courses-from-search {
+    width: 60%;
+    color: white;
+}
+
+#courses-from-search ul li {
+    list-style-type: none;
+    font-size: 1.2em;
+    background-color: gray; 
+    padding: 40px;
+    border-radius: 50px;
+    margin-bottom: 40px;
+}
+
+#courses-from-search img {
+    display: block;
+    margin: 0 auto;
+
+}
+

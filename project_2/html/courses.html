@@ -31,18 +31,12 @@
         <ul>
             {{#each categories}}
             <li>
-                <a href="courses.html?category={{id}}">{{title}}</a>
+                <a href="courses.html?category={{{id}}}">{{title}}</a>
             </li>
             {{/each}}
         </ul>
             
     </script>
-
-    <form id="search">
-        <label for="search-bar">Search for your book...</label>
-        <input type="text" name="search-bar" id="search-bar">
-        <input type="button" value="Search" id="submit-btn">
-    </form>
 
     <section>
         <script id="courses-template-search" type="text/x-handlebars-template">

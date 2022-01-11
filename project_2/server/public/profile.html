@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>e-Learning</title>
+    <link rel="icon" href="img/e-Learngin.png" type="text/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+</head>
+
+<body>
+    <!-- <ul id="menu-categories"></ul> -->
+
+        <button id="menu-btn" class="menu-closed">Menu</button>
+        <div id="menu-display" class="display-off">
+            <nav class="menu-wrap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <button id="toggle-categories">Categories</button>
+                        <div id="categories" class="categories-visible"></div>
+                    </li>
+                    <li><a href="profile.html">Log in</a></li>
+                    <li><a href="register.html">Sing Up</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    <script id="categories-template" type="text/x-handlebars-template">
+        <ul>
+            {{#each categories}}
+            <li>
+                <a href="courses.html?category={{id}}">{{title}}</a>
+            </li>
+            {{/each}}
+        </ul>
+            
+    </script>
+
+
+    <script src="javascript/search-book.js" type="text/javascript"></script>
+</body>
+
+</html>

@@ -23,13 +23,14 @@ function getDocs() {
 let btn = document.getElementById("submit-btn")
 btn.onclick = function (event) {
 
-    event.preventDefault
+    event.preventDefault()
     getDocs()
-
-    loadtheresponse()
+    sendData()
 }
+loadtheresponse()
 
 function logThem() {
+    console.log("print values")
     console.log(firstNameInput)
     console.log(lastNameInput)
     console.log(addressInput)
@@ -38,15 +39,14 @@ function logThem() {
     console.log(emailInput)
     console.log(passwordInput)
     console.log(passwordCheckInput)
-    return {
-        firstNameInput,
-        lastNameInput,
-        addressInput,
-        phoneInput,
-        educationInput,
-        emailInput,
-        phoneInput,
-        passwordCheckInput
+    return { fname: firstNameInput,
+        "lname": lastNameInput,
+        "address": addressInput,
+        "phone": phoneInput,
+        "education": educationInput,
+        "email": emailInput,
+        "password": passwordInput,
+        "passwordCheck": passwordCheckInput
     }
 }
 
@@ -55,19 +55,25 @@ async function sendData() {
     try {
 
         let data = logThem()
+        console.log(data)
         const options = {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json', 
+                'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify(data)
+            // body: JSON.stringify(data)
         }
 
         let resp = await fetch('http://localhost:3000/signup', options)
+        console.log(resp.status)
         console.log("waitresponseBeloow")
-        return await resp.json()
+        console.log(resp.text())
+        return resp
     } catch (e) {
-        console.log("Error ====> " + e)
+        console.log("Error ====> ")
+        console.log(e)
     }
 
 }
@@ -77,11 +83,12 @@ async function loadtheresponse() {
     // responseData = sendData()
     // console.log(responseData)
     try {
-        let r = await fetch('/')
-        let d = await r.json()
+        let r = await fetch('http://localhost:3000/connect')
+        let d = await r.text()
         console.log(d)
     } catch (e) {
-        console.log("Error ====> " + e)
+        console.log("Error below")
+        console.log(e)
 
     }
 

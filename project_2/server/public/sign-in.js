@@ -39,7 +39,7 @@ function logThem() {
     console.log(emailInput)
     console.log(passwordInput)
     console.log(passwordCheckInput)
-    return { fname: firstNameInput,
+    return { "fname": firstNameInput,
         "lname": lastNameInput,
         "address": addressInput,
         "phone": phoneInput,

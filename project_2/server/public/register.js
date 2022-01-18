@@ -1,59 +1,125 @@
+const SERVER = "http://localhost:3000";
+let firstNameInput = document.querySelector("#first-name");
+let lastNameInput = document.querySelector("#last-name");
+let addressInput = document.querySelector("#address");
+let phoneInput = document.querySelector("#phone");
+let educationInput = document.querySelector("#education-level");
+let emailInput = document.querySelector("#email");
+let passwordInput=document.getElementById("password");
+let passwordCheckInput=document.getElementById("password-check");
 let btn_submit=document.getElementById("submit-btn");
-let password=document.getElementById("password");
-let passwordCheck=document.getElementById("password-check");
 
-btn_submit.addEventListener("click",Onclick);
 
-var rform=document.getElementById("registerForm");
-rform.addEventListener("submit",function(event){
-    //request setup
-    var hd=new Headers();
+// let tempEmail;
 
-    hd.set('Accept', 'application/json');
+btn_submit.onclick = function(event) {
 
-    var fd=new FormData();
+    tempEmail = "none"
 
-    for(var i=0;i<rform,length; ++i){
-        fd.append(rform[i].name, rform[i].value);
+    event.preventDefault(); //prevent default action from submit to post in server
+    let passValidity = confirmSignUp();
+    console.log("checkpass ==== " + passValidity);
+    if (passValidity) {
+        let resposne = sendData();
+        console.log("response from server " + resposne);
     }
+    else {
+        console.log("User exists with this email!")
+    }
+    
+}
 
-    fd.append('json',JSON.stringify({example:'return value'}));
 
-    //make request
-    var url='/echo/json/';
-    var fetchOptions={
-        method: 'POST',
-        hd,
-        body:fd
-    };
+async function confirmEmails(email) {
+    let respEmail = await searchEmailUser(email);
+    console.log(respEmail+"==="+emailInput.value)
+    if (email === respEmail){
+        return true;
+    }
+}
 
-    var respPromise= fetch(url,fetchOptions);
+// var rform=document.getElementById("registerForm");
 
-    //use the response
-    then(function(response){
-        return response.json();
-    });
+var fd=new FormData();
 
-    then(function(data){
-        console.log(data);
-        //stelnei se server kai elegxei mail
-    });
+function confirmSignUp(){
 
-});
-
-function Onclick(){
     //check if password is valid
-    const password=document.getElementById("password");
-    if(!fname.checkValidity()){
+    let available = true;
+    if(!passwordInput.checkValidity()){
         alert('Password input is incorrect!')
+        available = false;
     }
 
     //check if passwords match
-    if(password.value!=passwordCheck.value){
+    if(passwordInput.value!=passwordCheckInput.value){
         alert('Passwords dont match!')
-        password.style.border= "3px solid red"
-        passwordCheck.style.border= "3px solid red"
+        passwordInput.style.border= "3px solid red"
+        passwordCheckInput.style.border= "3px solid red"
+        available = false;
     }
 
+    if (confirmEmails(emailInput.value)){
+        available = false;
+    }
+
+    return available;
     // location.href="index.html"
+}
+
+async function searchEmailUser(email) {
+
+    try {
+
+        //epeidi i js einai asychronous kanoume await na perimenoume to promise
+        //na oloklirwthei kai meta ksana kanoume await gia to respone.text() 
+        //giati einai promise kai einai pending an den kanoume await
+
+        let response = await fetch(SERVER + '/user-email-validity/' + email);
+        let data = await response.text();
+        tempEmail = data;
+        return data;
+    }
+    catch (err) {
+        console.log("Error ====> ");
+        console.log(err);
+    }
+}
+
+function valuesToJSONObject() {
+    return { "fname": firstNameInput.value,
+    "lname": lastNameInput.value,
+    "address": addressInput.value,
+    "phone": phoneInput.value,
+    "education": educationInput.value,
+    "email": emailInput.value,
+    "password": passwordInput.value,
+    "passwordCheck": passwordCheckInput.value
+}
+}
+
+async function sendData() {
+
+    try {
+
+        let data = valuesToJSONObject();
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json', 
+                'Access-Control-Allow-Origin': '*'
+            },
+            body: JSON.stringify(data)
+        }
+
+        let resp = await fetch(SERVER + '/signup', options)
+        console.log(resp.status)
+        console.log("waitresponseBeloow")
+        console.log(resp.text())
+        return resp
+    } catch (err) {
+        console.log("Error ====> ")
+        console.log(err)
+    }
+
 }

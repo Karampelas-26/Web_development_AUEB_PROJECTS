@@ -11,8 +11,6 @@
 </head>
 
 <body>
-    <!-- <ul id="menu-categories"></ul> -->
-
         <button id="menu-btn" class="menu-closed">Menu</button>
         <div id="menu-display" class="display-off">
             <nav class="menu-wrap">
@@ -22,7 +20,7 @@
                         <button id="toggle-categories">Categories</button>
                         <div id="categories" class="categories-visible"></div>
                     </li>
-                    <li><a href="profile.html">Log in</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
                     <li><a href="register.html">Sing Up</a></li>
                 </ul>
             </nav>
@@ -41,7 +39,11 @@
 
     <p id="sign-up-text">Sign Up</p>  
 
-    <p id="sign-up-msg"></p> <!--success or fail message-->
+    <div id="display-msg" class="msg-wrapper msg-off">
+        <p>Successful sign up.</p> <!--success or fail message-->
+        <a href="index.html" class="btn-return">Return Homepage</a>
+    </div>
+    
     <form method="post" class="registration-form" id="registerForm">
         
         <label for="first-name">First Name</label>

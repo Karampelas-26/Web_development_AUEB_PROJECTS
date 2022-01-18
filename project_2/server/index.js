@@ -58,22 +58,60 @@ app.post('/signup', cors(), (req, res) => {
     .catch(err => {
       res.status(400).send("Unable to save to Database!")
     });
-    
+
 });
 
 
 app.get('/user-email-validity/:emailUser', cors(), (req, res) => {
   let param = req.params.emailUser;
-
-  User.find({'emailUsr': param}, 'email', function (err, user) {
-    if (err) return handleError(err);
-    res.send(user[0].email)
+  
+  User.find({'email': param}, 'email', function (err, user) {
+    try {
+      console.log(typeof user[0].email)
+      console.log(user)
+      res.send(user[0].email)
+    } catch (err) {
+      console.log("This email doesn't exist. Error: " + err)
+      res.send("Email doesn't exist in Database!")
+    }
   })
-  .where('email').equals(param)
-  .exec(function (error, usr) {
-      // console.log("exec"+usr)
-  }); 
+
+});
+
+app.post('/login', cors(), (req,res)=>{
+  var email=req.body.email;
+  var password=req.body.password;
+
+ User.find({'email':email},'email password',function(err,user){
+   try{
+     let userPassword=user[0].password;
+     if(password!=userPassword){
+      res.send("false");
+     }else{
+       res.send("true");
+     }
+   }
+   catch(error){
+    console.log("This email doesn't exist. Error: " + err)
+    res.send("Email doesn't exist in Database!")
+   }
+ })
+});
+
+app.get('/user-info/:email',cors(), (req,res)=>{
+  let param = req.params.email;
+  
+  User.find({'email': param}, 'fname lname address phone education email', function (err, user) {
+    try {
+      let data =  JSON.stringify(user);
+      res.send(data);
+    } catch (err) {
+      console.log("This email doesn't exist. Error: " + err)
+      res.send("Email doesn't exist in Database!")
+    }
+  })
 
 });
 
 app.listen(3000, () => console.log('listening in port 3000'))
+

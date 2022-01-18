@@ -8,7 +8,6 @@ body {
     margin: 0px;
     font-family: 'Noto Sans', sans-serif;
     background-color: #121212;  
-    /* background-color:   green; */
 }
 
 form { 
@@ -111,10 +110,6 @@ form > label {
     color:white
 }
 
-
-.categories-button-visible {
-}
-
 .categories-button-hidden {
     visibility: hidden;
 }
@@ -138,13 +133,10 @@ form > label {
 }
 
 .menu-wrap {
-    /* text-align: center; */
     font-size: 1.2em;
     font-weight: 800;
     margin: 0;
     top: 0;
-    /* width: 100%; */
-    /* margin: 0 auto; */
 }
 
 .menu-wrap ul {
@@ -200,7 +192,6 @@ form > label {
 }
 
 .display-on {
-    /* background-color: darkgray; */
     width: 20%;
     padding: 20px;
 }
@@ -224,8 +215,93 @@ form > label {
 #sign-up-text {
     color: white;
     text-align: center;
-    /* display: block;
-    margin: 0 auto; */
     font-size: 2em;
     font-weight: 900;
 }
+
+/*msg-off, msg-on gia na emfanizoume kai na eksafanizoume ta text*/
+.msg-off{
+    visibility: hidden;
+}
+
+.msg-on{
+   text-align: center; 
+   color: white;
+}
+
+.btn-return{
+    background-color: lightslategray;
+    border-radius: 25px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.msg-wrapper>p{
+    color: white;
+}
+
+.form-off{
+    visibility: hidden;
+}
+
+/*profile.html*/
+
+.login-wrapper{
+    color: white;
+    text-align: center;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.login-wrapper>label{
+    font-size: 0.7em;
+}
+
+.login-wrapper>form>input{
+    height: 40px;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 0.5em;
+}
+
+#login-btn{
+    margin-top: 40px;
+    width: 30%;
+    border-radius: 25px;
+}
+
+.wrapper-off{
+    /* visibility: hidden; */
+    display: none;
+}
+
+#profile-info-wrapper {
+    color: white;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#profile-info-wrapper:hover {
+    width: 61%;
+}
+
+#profile-info-wrapper ul {
+    list-style-type: none;
+    text-align: center;
+    display: block;
+    
+    margin: 0 auto;
+    background-color: #3b3a3a;
+    padding: 30px;
+    font-size: 1.7em;
+}
+
+#profile-info-wrapper ul li {
+    margin: 20px;
+}
+
+

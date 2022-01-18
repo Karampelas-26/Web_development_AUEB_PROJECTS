@@ -9,40 +9,36 @@ let passwordInput=document.getElementById("password");
 let passwordCheckInput=document.getElementById("password-check");
 let btn_submit=document.getElementById("submit-btn");
 
-
-// let tempEmail;
+let tempEmail = "none"
 
 btn_submit.onclick = function(event) {
-
-    tempEmail = "none"
-
     event.preventDefault(); //prevent default action from submit to post in server
-    let passValidity = confirmSignUp();
-    console.log("checkpass ==== " + passValidity);
-    if (passValidity) {
-        let resposne = sendData();
-        console.log("response from server " + resposne);
+    submitUser();
+}
+async function submitUser(){
+    let confirmEmailValidity = await confirmSignUp(email);
+    if (confirmEmailValidity) {
+        let responseFromServer = await sendData();
+        console.log(responseFromServer);
+        hideForm();
+
     }
     else {
-        console.log("User exists with this email!")
+        console.log("Please try a valid email!")
     }
+}
+
+function hideForm(){
+    let msg=document.querySelector("#display-msg");
+    msg.classList= "msg-on"
     
+    let form=document.querySelector("#registerForm");
+    form.classList="form-off"
 }
-
-
-async function confirmEmails(email) {
-    let respEmail = await searchEmailUser(email);
-    console.log(respEmail+"==="+emailInput.value)
-    if (email === respEmail){
-        return true;
-    }
-}
-
-// var rform=document.getElementById("registerForm");
 
 var fd=new FormData();
 
-function confirmSignUp(){
+async function confirmSignUp(){
 
     //check if password is valid
     let available = true;
@@ -58,23 +54,24 @@ function confirmSignUp(){
         passwordCheckInput.style.border= "3px solid red"
         available = false;
     }
+    
 
-    if (confirmEmails(emailInput.value)){
+    let respEmail = await searchEmailUser(emailInput.value);
+    if (emailInput.value === respEmail){
+        alert("Email already exists!")
         available = false;
     }
 
     return available;
-    // location.href="index.html"
+
 }
 
 async function searchEmailUser(email) {
 
     try {
-
         //epeidi i js einai asychronous kanoume await na perimenoume to promise
         //na oloklirwthei kai meta ksana kanoume await gia to respone.text() 
         //giati einai promise kai einai pending an den kanoume await
-
         let response = await fetch(SERVER + '/user-email-validity/' + email);
         let data = await response.text();
         tempEmail = data;
@@ -101,7 +98,6 @@ function valuesToJSONObject() {
 async function sendData() {
 
     try {
-
         let data = valuesToJSONObject();
         const options = {
             method: 'POST',
@@ -111,14 +107,9 @@ async function sendData() {
             },
             body: JSON.stringify(data)
         }
-
         let resp = await fetch(SERVER + '/signup', options)
-        console.log(resp.status)
-        console.log("waitresponseBeloow")
-        console.log(resp.text())
         return resp
     } catch (err) {
-        console.log("Error ====> ")
         console.log(err)
     }
 

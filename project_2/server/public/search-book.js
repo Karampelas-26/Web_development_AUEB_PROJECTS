@@ -107,9 +107,7 @@ function searchResults() {
 
     let template = document.getElementById("courses-template-search").innerHTML
     let compiled_template = Handlebars.compile(template)
-    let rendered = compiled_template({
-        data
-    })
+    let rendered = compiled_template({data})
     document.getElementById("courses-from-search").innerHTML = rendered;
 }
 

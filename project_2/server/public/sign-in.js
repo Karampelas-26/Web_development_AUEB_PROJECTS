@@ -9,6 +9,9 @@ let passwordCheckInput
 
 var responseData = []
 
+/**
+ * gia na pairnoume ta values twn metablitwn pou orisame.
+ */
 function getDocs() {
     firstNameInput = document.querySelector("#first-name").value
     lastNameInput = document.querySelector("#last-name").value
@@ -29,6 +32,9 @@ btn.onclick = function (event) {
 }
 loadtheresponse()
 
+/**
+ * epistrefei ta data se morfi json
+ */
 function logThem() {
     console.log("print values")
     console.log(firstNameInput)
@@ -50,6 +56,10 @@ function logThem() {
     }
 }
 
+/**
+ * methodos upeuthini na steilei dedomena ston server gia na
+ * apothikeutoun stin basi. ousiastika prosthetei ton neo xristi.
+ */
 async function sendData() {
 
     try {
@@ -63,7 +73,6 @@ async function sendData() {
                 'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify(data)
-            // body: JSON.stringify(data)
         }
 
         let resp = await fetch('http://localhost:3000/signup', options)
@@ -80,8 +89,6 @@ async function sendData() {
 
 async function loadtheresponse() {
 
-    // responseData = sendData()
-    // console.log(responseData)
     try {
         let r = await fetch('http://localhost:3000/connect')
         let d = await r.text()

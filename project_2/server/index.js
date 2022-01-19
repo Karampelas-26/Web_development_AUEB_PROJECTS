@@ -10,16 +10,13 @@ const bodyParser = require('body-parser');
 const app = express()
 //oldpass gk45227237
 const uri = "mongodb+srv://george:1234@e-learning.dh2tn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-// client.connect(err => {
-
-//   client.close();
-// });
-// console.log("db connect")
 
 mongoose.Promise = global.Promise;
 mongoose.connect(uri);
 
+/**
+ * morfi tis basis mas
+ */
 var userSchema = new mongoose.Schema({
   fname: String,
   lname: String,
@@ -42,12 +39,15 @@ app.use(express.json({
 }))
 app.use(express.urlencoded({
   extended: false
-})) //attention plsss
+})) 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }))
 
+/**
+ * post methodos upeuthini gia tin apothikeusi dedomenwn sti basi
+ */
 app.post('/signup', cors(), (req, res) => {
   var myData = new User(req.body);
 
@@ -61,7 +61,11 @@ app.post('/signup', cors(), (req, res) => {
 
 });
 
-
+/**
+ * get methodos gia ton elegxo ean uparxei to email stin basi etsi
+ * wste kata tin eggrafi tou o xristis na min mporei na balei ena 
+ * idio me to idi uparxon
+ */
 app.get('/user-email-validity/:emailUser', cors(), (req, res) => {
   let param = req.params.emailUser;
   
@@ -78,6 +82,9 @@ app.get('/user-email-validity/:emailUser', cors(), (req, res) => {
 
 });
 
+/**
+ * post methodos pou elegxei ean o xristis ebale swsta ton kwdiko
+ */
 app.post('/login', cors(), (req,res)=>{
   var email=req.body.email;
   var password=req.body.password;
@@ -98,6 +105,11 @@ app.post('/login', cors(), (req,res)=>{
  })
 });
 
+/**
+ * get methodos pou kata to login elegxei ean to email einai idio
+ * me kapoio stin basi kai ean einai tote epistrefei ta dedomena 
+ * tou xristi me auto to email se morfi json
+ */
 app.get('/user-info/:email',cors(), (req,res)=>{
   let param = req.params.email;
   
@@ -113,5 +125,4 @@ app.get('/user-info/:email',cors(), (req,res)=>{
 
 });
 
-app.listen(3000, () => console.log('listening in port 3000'))
-
+app.listen(3000, () => console.log('listening in port 3000')) //se poio port akouei o server

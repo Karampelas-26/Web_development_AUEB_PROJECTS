@@ -10,11 +10,18 @@ let passwordCheckInput=document.getElementById("password-check");
 let btn_submit=document.getElementById("submit-btn");
 
 let tempEmail = "none"
-
+/**
+ * methodos pou kaleitai otan patame to btn_submit
+ */
 btn_submit.onclick = function(event) {
     event.preventDefault(); //prevent default action from submit to post in server
     submitUser();
 }
+
+/**
+ * meta apo ton elegxo twn dedomenwn stin confirmSignUp eite
+ * sunexizei me epituxia i bgazei minuma lathous.
+ */
 async function submitUser(){
     let confirmEmailValidity = await confirmSignUp(email);
     if (confirmEmailValidity) {
@@ -28,6 +35,12 @@ async function submitUser(){
     }
 }
 
+/**
+ * methodos gia krupsimo tis formas eggrafis. Oi klaseis
+ * msg-on kai form-off den exoun dilwthei sto register.html 
+ * alla uparxoun sto style.css kai i moni tous leitourgia einai
+ * na emfanizoun to minuma epituxias kai na kruboun tin forma antistoixa
+ */
 function hideForm(){
     let msg=document.querySelector("#display-msg");
     msg.classList= "msg-on"
@@ -38,6 +51,10 @@ function hideForm(){
 
 var fd=new FormData();
 
+/**
+ * 
+ * methodos gia ton elegxo twn input tou xristi.
+ */
 async function confirmSignUp(){
 
     //check if password is valid
@@ -55,7 +72,7 @@ async function confirmSignUp(){
         available = false;
     }
     
-
+    //elegxos oti to email pou ebale o xristis den uparxei idi
     let respEmail = await searchEmailUser(emailInput.value);
     if (emailInput.value === respEmail){
         alert("Email already exists!")

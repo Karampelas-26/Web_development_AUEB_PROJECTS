@@ -57,6 +57,10 @@ function getKeyword() {
     return document.getElementById("search-bar").value;
 }
 
+/**
+ * methodos gia na paroume apo to site ta mathimata me to keyword
+ * pou grafei o xristis.
+ */
 async function getCoursesFromServer(keyword ) {
     try {
         let updated_url
@@ -73,6 +77,9 @@ async function getCoursesFromServer(keyword ) {
     }
 }
 
+/**
+ * methodos pou epistrefei tis katigories twn mathimatwn.
+ */
 async function getCategories() {
     try {
         let data = await fetch(server + "/categories")
@@ -90,7 +97,6 @@ function searchResults() {
         // text.search() > 0 giati to search an den brei epistrefei -1
         if (text.search("courses.html") > 0) {
             let id = getCategoryIdFromURL()
-            // console.log(id)
             let title = returnCategoryFromID(id)
             console.log(text.search("courses.html"))
             result = "In category " + returnCategoryFromID(getCategoryIdFromURL()) + " "
@@ -158,11 +164,17 @@ btnToggleMenu.onclick = function () {
     }
 }
 
+/**
+ * gia to anoigma tou menu
+ */
 function openMenu() {
     let menu = document.querySelector("#menu-display")
     menu.classList = "display-on"
 }
 
+/**
+ * gia to kleisimo tou menu
+ */
 function closeMenu() {
     let menu = document.querySelector("#menu-display")
     menu.classList = "display-off"
@@ -170,6 +182,10 @@ function closeMenu() {
 
 let menuDisplayBtn = document.getElementById("menu-btn")
 menuOnOff = false;
+/**
+ * onclick methodos pou opote patietai to koumpi menuDisplayBtn
+ * analoga se ti katastasi briksetai to menu to anoigei i to kleinei 
+ */
 menuDisplayBtn.onclick = function () {
     if (menuOnOff) {
         closeMenu()
@@ -180,6 +196,9 @@ menuDisplayBtn.onclick = function () {
     }
 }
 
+/**
+ * methodos pou epistrefei tis katigories apo ena url.
+ */
 function getCategoryIdFromURL() {
     const urlSearchParams = new URLSearchParams(window.location.search)
     const params = Object.fromEntries(urlSearchParams.entries())

@@ -12,11 +12,13 @@ let server = 'https://elearning-aueb.herokuapp.com'
 //opote etsi xrisimopoioume to search-book.js kai se alla *.html
 if (words[words.length - 1] == "index.html") {
 
+    //auto einai gia na kanei search otan kanoume click to button 
     let btnSubmit = document.getElementById("submit-btn")
     btnSubmit.onclick = function () {
         submit()
     }
 
+    //auto einai gia patame Enter na kanei anazhthsh
     let formSearch = document.getElementById("search")
     formSearch.onsubmit = submitSearchWithEnter
     function submitSearchWithEnter(event) {
@@ -25,6 +27,7 @@ if (words[words.length - 1] == "index.html") {
     }
 }
 
+// apla kanoume copy ta dedomena se ena public pinaka courses
 async function setData(keyword) {
     let courses = await getCoursesFromServer(keyword)
     for (let i = 0; i < courses.length; i++) {
@@ -37,6 +40,7 @@ async function setData(keyword) {
     }
 }
 
+// apla kanoume copy ta dedomena se ena public pinaka categories
 async function setCategories() {
     let tempCategories = await getCategories()
     for (let i = 0; i < tempCategories.length; i++) {
@@ -44,6 +48,8 @@ async function setCategories() {
     }
 }
 
+
+//epistrefei ton titlo apo ena sugkekrimo id cathgorias
 function returnCategoryFromID(variableID) {
     for(let category of categories) {
         
@@ -53,14 +59,14 @@ function returnCategoryFromID(variableID) {
     }
 }
 
+//epistrefei to value to input apo to searchbar
 function getKeyword() {
     return document.getElementById("search-bar").value;
 }
 
-/**
- * methodos gia na paroume apo to site ta mathimata me to keyword
- * pou grafei o xristis.
- */
+//analoga se poia selida einai dhladh tin index.html h tin courses.html
+//kanei to antistoixo fetch, an einai sthn index kanei get gia bash me kapoio title
+//alliws kanei get basi kapoiou category
 async function getCoursesFromServer(keyword ) {
     try {
         let updated_url
@@ -77,9 +83,8 @@ async function getCoursesFromServer(keyword ) {
     }
 }
 
-/**
- * methodos pou epistrefei tis katigories twn mathimatwn.
- */
+
+//kanei fetch gia na paroume ta categories
 async function getCategories() {
     try {
         let data = await fetch(server + "/categories")
@@ -89,6 +94,8 @@ async function getCategories() {
     }
 }
 
+//analoga thn selida dld index.html h courses emfanizei antoistixo mhnuma
+//kai apo katw emfanizei ta courses, h emfanisi tous ginetai me handlebars
 function searchResults() {
     let length = data.length
     let result = "No courses found!"
@@ -97,6 +104,7 @@ function searchResults() {
         // text.search() > 0 giati to search an den brei epistrefei -1
         if (text.search("courses.html") > 0) {
             let id = getCategoryIdFromURL()
+            // console.log(id)
             let title = returnCategoryFromID(id)
             console.log(text.search("courses.html"))
             result = "In category " + returnCategoryFromID(getCategoryIdFromURL()) + " "
@@ -117,21 +125,30 @@ function searchResults() {
     document.getElementById("courses-from-search").innerHTML = rendered;
 }
 
+//voithitiki methodos i opoia einai async gia na perimenei na teleiwsei
+//to promise tou fetch stin setData kai meta na kalesei thn searchResults
+//kai na emfanisei ta dedomena alliws emfanizoume ton pinaka prin teleiwsei 
+//to promise apo to fetch kai den emfanizetai tipota 
 async function loadData(input) {
     await setData(input)
     searchResults()
 }
 
+//voithitiki synarthsh
 async function loadCategories() {
     await setCategories()
 }
 
+//apla kalountai oi entoles otan theloume na kanoume submit
 function submit() {
     data = []
     let input = getKeyword()
     loadData(input)
 }
 
+
+//hideMenu & showMenu synarthseis gia na emfanizoume kai na kryboume to menou
+//NOTE: einai gia to sub-menu twn categories
 function hideMenu() {
     let menuArea = document.querySelector("#categories")
     menuArea.innerHTML = ""
@@ -149,8 +166,8 @@ function showMenu() {
     menuArea.classList = "categories-vissble"
 }
 
-hideMenu()
-loadCategories()
+hideMenu()//ekteleite se auto to scope gia na krybetai to menu panta otan anoigei h selida
+loadCategories()//fortwnei ola ta categories molis fortwsei to arxeio gia na ta exoume diathesima sto menu
 let visibleMenu = false;
 let btnToggleMenu = document.getElementById("toggle-categories")
 btnToggleMenu.onclick = function () {
@@ -164,17 +181,12 @@ btnToggleMenu.onclick = function () {
     }
 }
 
-/**
- * gia to anoigma tou menu
- */
+//openMenu & closeMenu einai gia to main-menu
 function openMenu() {
     let menu = document.querySelector("#menu-display")
     menu.classList = "display-on"
 }
 
-/**
- * gia to kleisimo tou menu
- */
 function closeMenu() {
     let menu = document.querySelector("#menu-display")
     menu.classList = "display-off"
@@ -182,10 +194,6 @@ function closeMenu() {
 
 let menuDisplayBtn = document.getElementById("menu-btn")
 menuOnOff = false;
-/**
- * onclick methodos pou opote patietai to koumpi menuDisplayBtn
- * analoga se ti katastasi briksetai to menu to anoigei i to kleinei 
- */
 menuDisplayBtn.onclick = function () {
     if (menuOnOff) {
         closeMenu()
@@ -196,9 +204,7 @@ menuDisplayBtn.onclick = function () {
     }
 }
 
-/**
- * methodos pou epistrefei tis katigories apo ena url.
- */
+//apla pairnoume ta categories apo to url search
 function getCategoryIdFromURL() {
     const urlSearchParams = new URLSearchParams(window.location.search)
     const params = Object.fromEntries(urlSearchParams.entries())
@@ -206,8 +212,10 @@ function getCategoryIdFromURL() {
 }
 
 
-//megalutero tou mhden giati an einai false to search gurnaei -1 kai mpainei sto if statement
-if (text.search("courses.html") > 0) {
+
+
+//an einai sto courses.html tote pairnei tis parametrous apo to url kai emfanizei ta katalhla courses
+if (text.search("courses.html") > 0) {//megalutero tou mhden giati an einai false to search gurnaei -1 kai mpainei sto if statement
     console.log("shouldn't be herre")
     let category = getCategoryIdFromURL()
     loadData(category)

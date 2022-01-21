@@ -24,10 +24,9 @@ login_btn.onclick=function(event){
  */
 async function login(){
     let response=await sendCredentials();
-    if(response=="false"){
-        alert("Password invalid, please re-enter password!");
-    }
-    else{
+    console.log(response)
+    
+    if(response == 'true'){
         let profileInfo = await getProfileInfo(emailUsr.value);
         console.log(emailUsr.value)
         console.log(profileInfo);
@@ -36,6 +35,9 @@ async function login(){
         let rendered = compiled_template(profileInfo)
         document.getElementById("profile-info-wrapper").innerHTML = rendered;
         hideLogin();
+    }
+    else{
+        alert("Password invalid, please re-enter password!");
     }
 }
 

@@ -5,6 +5,7 @@ const {
 } = require('mongodb');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const path = require('path')
 
 
 const app = express()
@@ -33,7 +34,10 @@ var User = mongoose.model("User", userSchema);
 app.use(cors())
 
 app.use(express.json())
-app.use(express.static('public'))
+// app.use(express.static('public'))
+
+app.use(express.static(__dirname + '/public'));
+
 app.use(express.json({
   limit: '1mb'
 }))
@@ -95,7 +99,7 @@ app.post('/login', cors(), (req,res)=>{
      if(password!=userPassword){
       res.send("false");
      }else{
-       res.send("true");
+      res.send("true");
      }
    }
    catch(error){
